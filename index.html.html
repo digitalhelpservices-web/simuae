@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulateur Auto-Entrepreneur 2026 — Copilote Financier SimuAE</title>
+<meta name="description" content="Calculez votre revenu net auto-entrepreneur en 30 secondes. Trésorerie, alertes, projections 12 mois. Barèmes URSSAF 2026 officiels. Gratuit et sans inscription.">
+<meta name="keywords" content="simulateur auto-entrepreneur 2026, copilote financier AE, revenu net micro-entrepreneur, trésorerie auto-entrepreneur, combien mettre de côté, ACRE 2026, assistant business freelance, TJM, plafond micro-entreprise">
+<meta property="og:title" content="Simulateur Auto-Entrepreneur 2026 — Copilote Financier SimuAE">
+<meta property="og:description" content="Calculez votre revenu net AE en 30 secondes. Trésorerie, alertes automatiques, projections 12 mois. Barèmes URSSAF 2026. Gratuit.">
+<meta property="og:url" content="https://simuae.fr">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SimuAE">
+<meta property="og:image" content="https://simuae.fr/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Simulateur Auto-Entrepreneur 2026 — SimuAE">
+<meta name="twitter:description" content="Calculez votre revenu net AE en 30 secondes. Barèmes URSSAF 2026 officiels. Gratuit.">
+<meta name="twitter:image" content="https://simuae.fr/og-image.png">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://simuae.fr">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<link rel="llms" href="/llms.txt" type="text/plain">
+<link rel="alternate" type="application/json" href="/taux.json" title="Barèmes URSSAF 2026">
+
+<!-- Google Analytics 4 — remplacez G-XXXXXXXXXX -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-431NLPDT90"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-431NLPDT90');</script>
+
+<!-- Structured Data : WebApplication -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"SimuAE","url":"https://simuae.fr","description":"Simulateur et copilote financier pour auto-entrepreneurs français — revenu net, trésorerie, alertes URSSAF 2026","applicationCategory":"FinanceApplication","operatingSystem":"All","inLanguage":"fr-FR","offers":{"@type":"AggregateOffer","lowPrice":"0","highPrice":"19.99","priceCurrency":"EUR","offerCount":"3"}}
+</script>
+<!-- Structured Data : Organization -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"SimuAE","url":"https://simuae.fr","logo":"https://simuae.fr/favicon.svg","contactPoint":{"@type":"ContactPoint","email":"contact@simuae.fr","contactType":"customer service","availableLanguage":"French"},"sameAs":["https://www.producthunt.com/products/simuae"]}
+</script>
+<!-- Structured Data : FAQ AEO -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Combien un auto-entrepreneur garde-t-il vraiment en 2026 ?","acceptedAnswer":{"@type":"Answer","text":"Un AE en prestation de service BIC avec 3 000€ de CA/mois garde environ 1 850-2 100€ nets après URSSAF (21,2%) et impôt sur le revenu (tranche 11%). SimuAE calcule ce chiffre précisément selon votre situation."}},{"@type":"Question","name":"Combien mettre de côté en auto-entrepreneur pour l'URSSAF ?","acceptedAnswer":{"@type":"Answer","text":"En prestation de service BIC, provisionnez 21,2% de chaque encaissement pour les cotisations URSSAF. Ajoutez 5-10% pour l'IR. Total recommandé : 27-31% de votre CA sur un compte séparé. SimuAE calcule le montant exact."}},{"@type":"Question","name":"L'ACRE change-t-il en 2026 ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Le décret n°2026-69 du 6 février 2026 réduit l'ACRE de 50% à 25% à partir du 1er juillet 2026. Créer avant juillet 2026 permet de bénéficier de 50% d'exonération. SimuAE intègre cette réforme."}},{"@type":"Question","name":"Quel est le plafond auto-entrepreneur en 2026 ?","acceptedAnswer":{"@type":"Answer","text":"Les plafonds 2026 sont : 188 700€ pour la vente de marchandises, 77 700€ pour les prestations de services et professions libérales. Deux dépassements consécutifs = sortie automatique du régime micro."}},{"@type":"Question","name":"Comment fixer son prix pour gagner 2000€ nets en auto-entrepreneur ?","acceptedAnswer":{"@type":"Answer","text":"Pour 2 000€ nets/mois en BIC service (21,2%), vous devez facturer environ 2 540€ HT/mois. SimuAE calcule l'objectif CA inversé : entrez votre revenu cible et obtenez le CA nécessaire."}},{"@type":"Question","name":"Micro-entreprise ou SASU en 2026 ?","acceptedAnswer":{"@type":"Answer","text":"La micro-entreprise est avantageuse jusqu'à ~50-65k€ de CA annuel pour les services. Au-delà, la SASU ou l'EURL deviennent intéressantes si vous avez des charges professionnelles importantes. SimuAE compare les statuts en temps réel."}},{"@type":"Question","name":"Comment calculer son TJM freelance ?","acceptedAnswer":{"@type":"Answer","text":"TJM = CA mensuel cible ÷ jours facturables/mois. Pour 3 000€ CA/mois sur 18 jours : TJM = 167€/jour. SimuAE calcule votre TJM minimal automatiquement selon votre objectif de revenu net."}},{"@type":"Question","name":"Peut-on cumuler salarié et auto-entrepreneur en 2026 ?","acceptedAnswer":{"@type":"Answer","text":"Oui, le cumul est autorisé sauf clause d'exclusivité dans votre contrat de travail. Les revenus s'additionnent pour le calcul de l'impôt sur le revenu. Vérifiez votre contrat avant de vous lancer."}}]}
+</script>
+
+<style>
+/* ═══════════════════════════════
+   VARIABLES & RESET
+═══════════════════════════════ */
+:root {
+  --blue: #1B4FD8; --blue-dark: #1544C0; --blue-mid: #3B6BF8;
+  --blue-soft: #EEF3FF;
+  --violet: #7C3AED; --violet-soft: #F5F3FF;
+  --green: #059669; --green-soft: #ECFDF5;
+  --amber: #D97706; --amber-soft: #FFFBEB;
+  --red: #DC2626; --red-soft: #FEF2F2;
+  --teal: #0891B2; --teal-soft: #ECFEFF;
+  --ink: #0C0F14; --ink-2: #3D4452; --ink-3: #7C8494; --ink-4: #B8BDC8;
+  --bg: #F6F8FC; --surface: #FFFFFF; --surface-2: #F0F3F9;
+  --border: rgba(0,0,0,0.08); --border-strong: rgba(0,0,0,0.14);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06); --shadow: 0 4px 16px rgba(0,0,0,0.08); --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+  --r: 14px; --r-sm: 8px;
+  --font-d: 'Bricolage Grotesque', sans-serif; --font-b: 'Inter', sans-serif;
+}
+@media(prefers-color-scheme:dark){:root{
+  --ink:#F0F4FF; --ink-2:#B8C0D4; --ink-3:#7A829A; --ink-4:#3D4458;
+  --bg:#0B0E16; --surface:#131722; --surface-2:#1A1F2E;
+  --blue-soft:#1B2B5C; --violet-soft:#1E1540; --green-soft:#0C2D20;
+  --amber-soft:#2D1F08; --red-soft:#2D0F0F; --teal-soft:#0C2D38;
+  --border:rgba(255,255,255,0.07); --border-strong:rgba(255,255,255,0.13);
+  --shadow-sm:0 1px 3px rgba(0,0,0,0.3); --shadow:0 4px 16px rgba(0,0,0,0.4); --shadow-lg:0 12px 40px rgba(0,0,0,0.5);
+}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
+
+/* ═══════════════════════════════
+   NAV
+═══════════════════════════════ */
+.nav{position:sticky;top:0;z-index:200;background:rgba(246,248,252,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 20px}
+@media(prefers-color-scheme:dark){.nav{background:rgba(11,14,22,.9)}}
+.nav-inner{max-width:1080px;margin:0 auto;height:58px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:9px;font-family:var(--font-d);font-weight:800;font-size:18px;color:var(--ink);text-decoration:none;letter-spacing:-0.5px}
+.logo-mark{width:30px;height:30px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-mark svg{width:16px;height:16px;color:white}
+.logo em{color:var(--blue);font-style:normal}
+.nav-tag{font-size:11px;color:var(--ink-3);font-weight:500;border-left:1px solid var(--border);padding-left:12px;margin-left:4px;white-space:nowrap}
+@media(max-width:600px){.nav-tag{display:none}}
+.nav-right{display:flex;align-items:center;gap:8px}
+.nav-link{font-size:13px;color:var(--ink-2);text-decoration:none;padding:6px 10px;border-radius:8px;transition:.15s;font-weight:500}
+.nav-link:hover{background:var(--surface-2);color:var(--ink)}
+.btn-nav{font-size:13px;font-weight:600;padding:7px 16px;background:var(--blue);color:white;border:none;border-radius:20px;cursor:pointer;font-family:var(--font-b);transition:.2s;text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+.btn-nav:hover{background:var(--blue-dark);transform:translateY(-1px)}
+@media(max-width:640px){.nav-link{display:none}}
+
+/* ═══════════════════════════════
+   HERO
+═══════════════════════════════ */
+.hero{max-width:820px;margin:0 auto;padding:60px 20px 32px;text-align:center}
+.hero-eye{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--blue);background:var(--blue-soft);padding:5px 14px;border-radius:20px;margin-bottom:22px;letter-spacing:.04em;text-transform:uppercase;animation:fd .5s ease both}
+.live-dot{width:7px;height:7px;background:var(--blue);border-radius:50%;animation:pulse 2s infinite}
+h1{font-family:var(--font-d);font-size:clamp(28px,5.5vw,50px);font-weight:800;line-height:1.1;letter-spacing:-2px;color:var(--ink);margin-bottom:16px;animation:fd .5s .08s ease both;opacity:0}
+h1 .accent{color:var(--blue)}
+.hero-sub{font-size:clamp(15px,2vw,18px);color:var(--ink-2);max-width:560px;margin:0 auto 28px;animation:fd .5s .16s ease both;opacity:0;line-height:1.65}
+.trust-bar{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:24px;animation:fd .5s .24s ease both;opacity:0}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-2);font-weight:500}
+.trust-item svg{width:14px;height:14px;color:var(--green);flex-shrink:0}
+
+/* PILLS */
+.pills{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;margin-bottom:36px;animation:fd .5s .3s ease both;opacity:0}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:500;padding:5px 12px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--ink-2)}
+.pill svg{width:11px;height:11px;flex-shrink:0}
+.pill.b{background:var(--blue-soft);color:var(--blue);border-color:transparent}
+.pill.g{background:var(--green-soft);color:var(--green);border-color:transparent}
+.pill.a{background:var(--amber-soft);color:var(--amber);border-color:transparent}
+.pill.v{background:var(--violet-soft);color:var(--violet);border-color:transparent}
+
+/* ═══════════════════════════════
+   DIFF BANNER
+═══════════════════════════════ */
+.diff-wrap{max-width:820px;margin:0 auto 28px;padding:0 20px;animation:fu .6s .35s ease both;opacity:0}
+.diff-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:9px}
+.diff-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-sm);padding:13px}
+.diff-vs{font-size:10px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+.diff-them{font-size:12px;color:var(--red);text-decoration:line-through;margin-bottom:3px}
+.diff-us{font-size:12px;font-weight:600;color:var(--green)}
+
+/* ═══════════════════════════════
+   ONGLETS
+═══════════════════════════════ */
+.tabs-wrap{max-width:820px;margin:0 auto;padding:0 20px 10px;animation:fu .6s .4s ease both;opacity:0}
+.tabs-bar{display:flex;gap:4px;background:var(--surface-2);border-radius:12px;padding:4px;border:1px solid var(--border)}
+.tab-btn{flex:1;padding:9px 7px;font-size:12.5px;font-weight:600;font-family:var(--font-b);border:none;background:transparent;color:var(--ink-3);border-radius:9px;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap}
+.tab-btn svg{width:14px;height:14px;flex-shrink:0}
+.tab-btn.active{background:var(--surface);color:var(--blue);box-shadow:var(--shadow-sm)}
+@media(max-width:580px){.tab-btn span{display:none}.tab-btn svg{width:18px;height:18px}}
+
+/* ═══════════════════════════════
+   CARTE PRINCIPALE
+═══════════════════════════════ */
+.main-wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.card-top{display:flex;align-items:center;justify-content:space-between;padding:18px 24px 14px;border-bottom:1px solid var(--border)}
+.card-brand{display:flex;align-items:center;gap:10px}
+.ai-dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;flex-shrink:0}
+.card-title{font-family:var(--font-d);font-size:14px;font-weight:700;color:var(--ink)}
+.card-sub{font-size:11px;color:var(--green);font-weight:500}
+.card-body{padding:24px}
+
+/* ═══════════════════════════════
+   SIMULATEUR — FORMULAIRE
+═══════════════════════════════ */
+.field{margin-bottom:18px}
+.label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:7px}
+.label small{font-weight:400;color:var(--ink-3);margin-left:4px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:480px){.row2{grid-template-columns:1fr}}
+.inp-wrap{position:relative}
+.inp-pre{position:absolute;left:13px;top:50%;transform:translateY(-50%);font-size:14px;font-weight:600;color:var(--ink-3);pointer-events:none}
+input[type=number],select{width:100%;height:46px;background:var(--surface-2);border:1.5px solid var(--border);border-radius:10px;font-family:var(--font-b);font-size:14px;font-weight:500;color:var(--ink);outline:none;transition:.2s;-webkit-appearance:none;appearance:none}
+input[type=number]{padding:0 12px 0 30px}
+select{padding:0 36px 0 13px;cursor:pointer}
+input[type=number]:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(27,79,216,.1)}
+input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
+.sel-wrap{position:relative}
+.sel-wrap::after{content:'';position:absolute;right:13px;top:50%;transform:translateY(-50%);border:4px solid transparent;border-top:5px solid var(--ink-3);pointer-events:none}
+.toggle-row{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:10px;cursor:pointer;border:1.5px solid transparent;transition:.2s;margin-bottom:8px}
+.toggle-row:hover{border-color:var(--violet)}
+.toggle-row.acre-bg{background:var(--violet-soft)}
+.toggle-row.vl-bg{background:var(--teal-soft)}
+.toggle-row input[type=checkbox]{width:18px;height:18px;accent-color:var(--violet);cursor:pointer;flex-shrink:0}
+.toggle-label{font-size:13px;font-weight:500;color:var(--ink);line-height:1.4}
+.toggle-label small{color:var(--ink-3);font-weight:400;display:block;font-size:11.5px}
+
+/* OBJECTIF INVERSÉ */
+.inv-box{background:var(--blue-soft);border-radius:10px;padding:13px;margin-bottom:18px;border:1.5px solid rgba(27,79,216,.15)}
+.inv-label{font-size:12px;font-weight:600;color:var(--blue);margin-bottom:7px;display:flex;align-items:center;gap:5px}
+.inv-label svg{width:13px;height:13px}
+.inv-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.inv-row input[type=number]{max-width:170px;background:white}
+.inv-result{font-size:13px;font-weight:700;color:var(--blue)}
+
+/* LOADER IA */
+.ia-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--blue-soft);border-radius:8px;margin-top:12px;opacity:0;transform:translateY(4px);transition:.3s}
+.ia-bar.on{opacity:1;transform:translateY(0)}
+.ia-bar-text{font-size:12.5px;font-weight:500;color:var(--blue)}
+.dots span{display:inline-block;width:4px;height:4px;background:var(--blue);border-radius:50%;margin:0 2px;animation:dot 1.2s infinite}
+.dots span:nth-child(2){animation-delay:.2s}.dots span:nth-child(3){animation-delay:.4s}
+
+/* ═══════════════════════════════
+   RÉSULTAT
+═══════════════════════════════ */
+.result-zone{border-top:1px solid var(--border);padding:24px;display:none}
+.result-zone.on{display:block}
+
+/* Score viabilité */
+.score-section{margin-bottom:16px}
+@media(max-width:480px){.score-section{display:none}}
+.score-label{font-size:12.5px;color:var(--ink-2);font-weight:500;margin-bottom:7px;display:flex;align-items:center;gap:8px}
+.score-num-badge{font-weight:800;color:var(--violet);font-family:var(--font-d)}
+.score-bar-bg{height:8px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:5px}
+.score-bar-fill{height:8px;background:linear-gradient(90deg,var(--blue),var(--violet));border-radius:4px;transition:width 1.2s cubic-bezier(.22,1,.36,1);width:0}
+
+/* Fourchette gratuit */
+.range-bloc{margin-bottom:16px}
+.range-header{font-size:11px;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.range-nums{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.range-low{font-family:var(--font-d);font-size:clamp(28px,6vw,42px);font-weight:800;letter-spacing:-2px;color:var(--ink);line-height:1}
+.range-sep{font-size:14px;color:var(--ink-3)}
+.range-high{font-family:var(--font-d);font-size:clamp(28px,6vw,42px);font-weight:800;letter-spacing:-2px;color:var(--ink);line-height:1}
+.range-unit{font-size:15px;color:var(--ink-3);font-weight:500}
+.range-note{font-size:12px;color:var(--ink-3);margin-top:4px}
+
+/* Médiane */
+.mediane-row{display:flex;align-items:center;gap:7px;padding:9px 13px;border-radius:8px;font-size:13px;color:var(--ink);margin-bottom:14px;background:var(--green-soft)}
+.mediane-row .icon{font-size:15px;flex-shrink:0}
+.mediane-pos{color:var(--green);font-weight:700}
+
+/* Répartition argent */
+.repartition-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:16px}
+.rep-card{border-radius:10px;padding:12px;border:1px solid var(--border)}
+.rep-icon{font-size:17px;margin-bottom:4px}
+.rep-lbl{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}
+.rep-val{font-family:var(--font-d);font-size:20px;font-weight:800;letter-spacing:-0.5px}
+.rep-note{font-size:10.5px;color:var(--ink-3);margin-top:2px}
+.r-green{background:var(--green-soft);border-color:rgba(5,150,105,.15)}.r-green .rep-lbl,.r-green .rep-val{color:var(--green)}
+.r-red{background:var(--red-soft);border-color:rgba(220,38,38,.12)}.r-red .rep-lbl,.r-red .rep-val{color:var(--red)}
+.r-amber{background:var(--amber-soft);border-color:rgba(217,119,6,.15)}.r-amber .rep-lbl,.r-amber .rep-val{color:var(--amber)}
+.r-blue{background:var(--blue-soft);border-color:rgba(27,79,216,.12)}.r-blue .rep-lbl,.r-blue .rep-val{color:var(--blue)}
+
+/* Conseil IA */
+.conseil-ia{background:linear-gradient(135deg,var(--blue-soft),var(--violet-soft));border:1px solid rgba(27,79,216,.18);border-radius:12px;padding:15px;margin-bottom:18px}
+.conseil-ia-hd{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.05em;margin-bottom:9px}
+.conseil-ia-hd svg{width:13px;height:13px}
+.conseil-ia-text{font-size:13px;color:var(--ink);line-height:1.7}
+.conseil-ia-text strong{color:var(--blue)}
+
+/* Freemium wall */
+.fw-preview{filter:blur(5px);pointer-events:none;user-select:none;margin-bottom:14px;opacity:.65}
+.fw-row{display:flex;justify-content:space-between;font-size:13px;padding:7px 0;border-bottom:1px solid var(--border);color:var(--ink-2)}
+.fw-title{font-family:var(--font-d);font-size:19px;font-weight:800;color:var(--ink);margin-bottom:5px;letter-spacing:-0.5px;text-align:center}
+.fw-sub{font-size:13px;color:var(--ink-2);margin-bottom:16px;text-align:center}
+.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+@media(max-width:440px){.choice-grid{grid-template-columns:1fr}}
+.ch-card{border:2px solid var(--border);border-radius:14px;padding:15px;cursor:pointer;text-align:center;transition:.2s;background:var(--surface);position:relative}
+.ch-card:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:var(--shadow)}
+.ch-card.feat{border-color:var(--blue);background:var(--blue-soft)}
+.ch-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--violet);color:white;font-size:10px;font-weight:700;padding:2px 10px;border-radius:20px;white-space:nowrap}
+.ch-price{font-family:var(--font-d);font-size:26px;font-weight:800;color:var(--blue);letter-spacing:-1px;line-height:1}
+.ch-title{font-size:13px;font-weight:600;color:var(--ink);margin:4px 0 8px}
+.ch-list{list-style:none;text-align:left}
+.ch-list li{font-size:11.5px;color:var(--ink-2);padding:2px 0;display:flex;align-items:flex-start;gap:5px;line-height:1.4}
+.ch-list li::before{content:'✓';color:var(--green);font-weight:700;font-size:11px;flex-shrink:0;margin-top:1px}
+.share-btns{display:flex;gap:8px}
+.btn-share{flex:1;padding:10px;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;font-size:12px;font-weight:500;color:var(--ink-2);font-family:var(--font-b);cursor:pointer;transition:.15s;display:flex;align-items:center;justify-content:center;gap:5px}
+.btn-share:hover{background:var(--border);color:var(--ink)}
+
+/* Stats row */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:18px 24px;border-top:1px solid var(--border)}
+.stat-num{font-family:var(--font-d);font-size:22px;font-weight:800;color:var(--blue);letter-spacing:-0.5px}
+.stat-label{font-size:11px;color:var(--ink-3);margin-top:2px;line-height:1.3}
+
+/* ═══════════════════════════════
+   TRÉSORERIE
+═══════════════════════════════ */
+.tres-grid{padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.tres-grid{grid-template-columns:1fr}}
+.tres-lbl{font-size:11.5px;font-weight:600;color:var(--ink-3);margin-bottom:4px}
+.tres-val{font-family:var(--font-d);font-size:26px;font-weight:800;letter-spacing:-1px;color:var(--ink)}
+.tres-note{font-size:11px;color:var(--ink-3);margin-top:2px}
+.pbar-section{padding:0 24px 20px}
+.pbar-lbl{font-size:12px;font-weight:600;color:var(--ink-2);margin-bottom:6px}
+.pbar-bg{height:10px;background:var(--surface-2);border-radius:5px;overflow:hidden;margin-bottom:5px}
+.pbar-fill{height:10px;border-radius:5px;transition:width 1s ease}
+.pbar-legend{display:flex;gap:12px;flex-wrap:wrap}
+.pleg{font-size:11px;color:var(--ink-3);display:flex;align-items:center;gap:4px}
+.pleg-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.cal-section{padding:0 24px 24px}
+.cal-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.cal-title svg{width:13px;height:13px;color:var(--amber)}
+.cal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.cal-m{border-radius:8px;padding:9px 7px;text-align:center;border:1px solid var(--border);font-size:11px}
+.cal-m-name{font-weight:600;color:var(--ink-2);margin-bottom:3px}
+.cal-m-amt{font-family:var(--font-d);font-size:13px;font-weight:700;color:var(--ink)}
+.cal-m.decla{background:var(--amber-soft);border-color:rgba(217,119,6,.2)}
+.cal-m.decla .cal-m-amt{color:var(--amber)}
+
+/* ═══════════════════════════════
+   PROJECTIONS
+═══════════════════════════════ */
+.proj-body{padding:24px}
+.proj-controls{display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.proj-controls label{font-size:12.5px;font-weight:600;color:var(--ink-2)}
+.proj-slider{flex:1;min-width:120px}
+.proj-val{font-family:var(--font-d);font-size:14px;font-weight:700;color:var(--blue);min-width:60px}
+.chart-area{height:200px;position:relative;margin-bottom:20px;overflow:hidden}
+.chart-bars{display:flex;align-items:flex-end;gap:5px;height:170px;padding:0 4px}
+.bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px}
+.bar{width:100%;border-radius:5px 5px 0 0;transition:height 1s ease;min-height:3px}
+.bar-lbl{font-size:9.5px;color:var(--ink-3);font-weight:500;text-align:center}
+.bar-val{font-size:9.5px;font-weight:700;color:var(--ink-2);text-align:center}
+.plafond-line{position:absolute;left:0;right:0;border-top:2px dashed var(--red);display:flex;align-items:center}
+.plafond-badge{background:var(--red);color:white;font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;margin-left:6px;white-space:nowrap}
+.insights{display:flex;flex-direction:column;gap:8px}
+.insight{border-radius:10px;padding:13px 14px;border:1px solid var(--border);display:flex;align-items:flex-start;gap:9px}
+.insight-icon{font-size:18px;flex-shrink:0}
+.insight-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:3px}
+.insight-text{font-size:12.5px;color:var(--ink-2);line-height:1.55}
+.insight.g{background:var(--green-soft);border-color:rgba(5,150,105,.15)}
+.insight.a{background:var(--amber-soft);border-color:rgba(217,119,6,.15)}
+.insight.r{background:var(--red-soft);border-color:rgba(220,38,38,.12)}
+.insight.b{background:var(--blue-soft);border-color:rgba(27,79,216,.12)}
+
+/* ═══════════════════════════════
+   ALERTES
+═══════════════════════════════ */
+.alertes-body{padding:24px}
+.alerte{display:flex;gap:12px;padding:14px;border-radius:12px;border:1px solid var(--border);margin-bottom:10px}
+.alerte-icon{font-size:20px;flex-shrink:0}
+.alerte-title{font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:3px;display:flex;align-items:center;gap:6px}
+.alerte-text{font-size:12.5px;color:var(--ink-2);line-height:1.55}
+.alerte-action{font-size:12px;font-weight:600;margin-top:6px;cursor:pointer;border:none;background:none;font-family:var(--font-b);padding:0;display:inline-flex;align-items:center;gap:4px}
+.alerte.urg{background:var(--red-soft);border-color:rgba(220,38,38,.2)}.alerte.urg .alerte-action{color:var(--red)}
+.alerte.warn{background:var(--amber-soft);border-color:rgba(217,119,6,.2)}.alerte.warn .alerte-action{color:var(--amber)}
+.alerte.info{background:var(--blue-soft);border-color:rgba(27,79,216,.15)}.alerte.info .alerte-action{color:var(--blue)}
+.alerte.ok{background:var(--green-soft);border-color:rgba(5,150,105,.15)}.alerte.ok .alerte-action{color:var(--green)}
+.sev-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.sd-r{background:var(--red)}.sd-a{background:var(--amber)}.sd-b{background:var(--blue)}.sd-g{background:var(--green)}
+
+/* ═══════════════════════════════
+   AIDE À LA DÉCISION
+═══════════════════════════════ */
+.aide-body{padding:24px}
+.dec-card{background:var(--surface-2);border-radius:12px;padding:15px;margin-bottom:12px;border:1px solid var(--border)}
+.dec-q{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:7px;display:flex;align-items:flex-start;gap:8px}
+.dec-q-icon{font-size:18px;flex-shrink:0}
+.dec-a{font-size:13px;color:var(--ink-2);line-height:1.65}
+.dec-a strong{color:var(--ink)}
+.hl{display:inline-block;background:var(--blue-soft);color:var(--blue);font-weight:700;padding:1px 8px;border-radius:6px;font-family:var(--font-d)}
+
+/* ═══════════════════════════════
+   COMPARATEUR
+═══════════════════════════════ */
+.comp-body{padding:24px}
+.comp-wrap{overflow-x:auto}
+.comp-table{width:100%;border-collapse:collapse}
+.comp-table th{font-size:11.5px;font-weight:700;color:var(--ink-2);text-align:left;padding:10px 12px;background:var(--surface-2);border-bottom:2px solid var(--border)}
+.comp-table td{font-size:12.5px;padding:10px 12px;border-bottom:1px solid var(--border);color:var(--ink)}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-best{font-weight:700;color:var(--green);background:var(--green-soft)}
+.comp-moy{color:var(--amber)}
+.comp-bad{color:var(--red)}
+.comp-rec{background:var(--green-soft);border:1px solid rgba(5,150,105,.2);border-radius:10px;padding:14px;margin-top:14px;font-size:13px;color:var(--ink);display:flex;align-items:flex-start;gap:8px;line-height:1.6}
+.comp-rec svg{width:16px;height:16px;color:var(--green);flex-shrink:0;margin-top:2px}
+
+/* ═══════════════════════════════
+   PROMPTPRO
+═══════════════════════════════ */
+.pp-section{border-top:1px solid var(--border);padding:20px 24px;display:none}
+.pp-section.on{display:block}
+.pp-top{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.pp-chip{font-size:10px;font-weight:700;background:var(--violet);color:white;padding:3px 9px;border-radius:20px;letter-spacing:.04em}
+.pp-title{font-size:14px;font-weight:700;color:var(--ink)}
+.pp-sub{font-size:12.5px;color:var(--ink-2);margin-bottom:11px}
+.metier-btns{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:11px}
+.met-btn{padding:6px 12px;font-size:12px;font-weight:500;font-family:var(--font-b);background:var(--surface-2);border:1.5px solid var(--border);border-radius:20px;cursor:pointer;color:var(--ink-2);transition:.15s;display:flex;align-items:center;gap:4px}
+.met-btn.active,.met-btn:hover{border-color:var(--violet);background:var(--violet-soft);color:var(--violet)}
+.prompt-list{display:none;flex-direction:column;gap:6px}
+.prompt-list.on{display:flex}
+.prompt-item{background:var(--surface-2);border-radius:8px;padding:10px 12px;font-size:12.5px;color:var(--ink);line-height:1.55;border-left:3px solid var(--violet);display:flex;align-items:flex-start;gap:8px}
+.prompt-num{font-size:10px;font-weight:700;color:var(--violet);background:var(--violet-soft);padding:2px 6px;border-radius:4px;flex-shrink:0;font-family:var(--font-d);margin-top:1px}
+.pp-cta{width:100%;padding:11px;background:var(--violet);color:white;border:none;border-radius:10px;font-family:var(--font-b);font-size:13px;font-weight:700;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px}
+.pp-cta:hover{background:#6D28D9}
+
+/* ═══════════════════════════════
+   FAQ
+═══════════════════════════════ */
+.faq-section{max-width:820px;margin:0 auto;padding:0 20px 60px}
+.section-hed{font-family:var(--font-d);font-size:28px;font-weight:800;color:var(--ink);letter-spacing:-1px;margin-bottom:20px;text-align:center}
+.faq-item{border-bottom:1px solid var(--border);padding:14px 0}
+.faq-q{font-size:14.5px;font-weight:600;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;line-height:1.4;user-select:none}
+.faq-q::after{content:'+';font-size:20px;color:var(--blue);flex-shrink:0;font-weight:300;transition:.2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{font-size:13.5px;color:var(--ink-2);line-height:1.7;margin-top:9px;display:none}
+.faq-item.open .faq-a{display:block}
+
+/* ═══════════════════════════════
+   MAILLAGE INTERNE
+═══════════════════════════════ */
+.int-section{max-width:820px;margin:0 auto;padding:0 20px 40px}
+.int-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:8px}
+.int-link{display:flex;align-items:center;gap:7px;padding:10px 12px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:12.5px;font-weight:500;color:var(--ink-2);text-decoration:none;transition:.15s}
+.int-link:hover{border-color:var(--blue);color:var(--blue);background:var(--blue-soft)}
+.int-link svg{width:12px;height:12px;flex-shrink:0}
+
+/* ═══════════════════════════════
+   MENTIONS LÉGALES & FOOTER
+═══════════════════════════════ */
+.legal-section{max-width:820px;margin:0 auto;padding:0 20px 40px}
+.disclaimer{background:var(--amber-soft);border:1px solid rgba(217,119,6,.2);border-radius:10px;padding:14px;font-size:12px;color:var(--ink-2);line-height:1.6;margin-bottom:14px}
+.disclaimer strong{color:var(--amber)}
+.legal-block{background:var(--surface-2);border-radius:8px;padding:10px 14px;font-size:11.5px;color:var(--ink-3);line-height:1.6;text-align:left}
+footer{background:var(--surface);border-top:1px solid var(--border);padding:28px 20px;text-align:center;font-size:12px;color:var(--ink-3)}
+footer a{color:var(--ink-3);text-decoration:none;margin:0 6px}
+footer a:hover{color:var(--blue);text-decoration:underline}
+.footer-ai-tag{display:inline-flex;align-items:center;gap:5px;background:var(--violet-soft);color:var(--violet);font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;margin-bottom:12px}
+
+/* ═══════════════════════════════
+   CHATBOT
+═══════════════════════════════ */
+.chat-fab{position:fixed;bottom:24px;right:24px;width:54px;height:54px;background:var(--violet);border-radius:50%;border:none;cursor:pointer;box-shadow:0 6px 24px rgba(124,58,237,.35);display:flex;align-items:center;justify-content:center;z-index:300;transition:.2s}
+.chat-fab:hover{transform:scale(1.08)}
+.chat-fab svg{width:22px;height:22px;color:white}
+.chat-ring{position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--violet);opacity:0;animation:ring 3s ease infinite}
+.chat-panel{position:fixed;bottom:90px;right:24px;width:min(340px,calc(100vw - 48px));background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow-lg);z-index:300;display:none;flex-direction:column;overflow:hidden;max-height:480px}
+.chat-panel.open{display:flex}
+.chat-head{background:var(--violet);padding:14px 16px;display:flex;align-items:center;gap:10px}
+.chat-head-name{font-size:14px;font-weight:700;color:white}
+.chat-head-desc{font-size:11px;color:rgba(255,255,255,.75)}
+.chat-close{margin-left:auto;background:none;border:none;color:white;font-size:20px;cursor:pointer;line-height:1}
+.chat-msgs{flex:1;padding:14px;overflow-y:auto;display:flex;flex-direction:column;gap:9px;max-height:300px}
+.msg-b,.msg-u{max-width:85%;padding:9px 12px;border-radius:12px;font-size:13px;line-height:1.5}
+.msg-b{background:var(--surface-2);color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+.msg-u{background:var(--violet);color:white;align-self:flex-end;border-bottom-right-radius:4px}
+.chat-inp-row{padding:10px;border-top:1px solid var(--border);display:flex;gap:8px}
+.chat-inp{flex:1;height:38px;padding:0 12px;background:var(--surface-2);border:1px solid var(--border);border-radius:19px;font-family:var(--font-b);font-size:13px;color:var(--ink);outline:none}
+.chat-send{width:38px;height:38px;background:var(--violet);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.15s}
+.chat-send:hover{background:#6D28D9}
+.chat-send svg{width:16px;height:16px;color:white}
+
+/* ═══════════════════════════════
+   STICKY + EXIT + COOKIE
+═══════════════════════════════ */
+.sticky-m{display:none;position:fixed;bottom:90px;left:20px;right:90px;z-index:200}
+@media(max-width:640px){.sticky-m.on{display:block}}
+.sticky-btn{width:100%;padding:13px;background:var(--blue);color:white;border:none;border-radius:14px;font-family:var(--font-b);font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 6px 20px rgba(27,79,216,.3);display:flex;align-items:center;justify-content:center;gap:6px}
+
+.exit-ov{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:400;display:none;align-items:center;justify-content:center;padding:20px;min-height:400px}
+.exit-ov.on{display:flex}
+.exit-modal{background:var(--surface);border-radius:20px;padding:28px;max-width:380px;width:100%;text-align:center;box-shadow:var(--shadow-lg)}
+.exit-emoji{font-size:36px;display:block;margin-bottom:10px}
+.exit-title{font-family:var(--font-d);font-size:20px;font-weight:800;color:var(--ink);margin-bottom:7px}
+.exit-sub{font-size:13px;color:var(--ink-2);margin-bottom:18px}
+.exit-dismiss{background:none;border:none;font-size:12px;color:var(--ink-3);cursor:pointer;margin-top:10px;font-family:var(--font-b);padding:4px}
+
+.cookie-bar{position:fixed;bottom:0;left:0;right:0;background:var(--ink);color:white;padding:13px 20px;display:flex;align-items:center;gap:14px;z-index:500;font-size:13px}
+.cookie-text{flex:1;line-height:1.4;color:rgba(255,255,255,.8)}
+.cookie-text a{color:rgba(255,255,255,.55);text-decoration:underline}
+.cookie-btns{display:flex;gap:8px;flex-shrink:0}
+.btn-ck-ok{padding:8px 18px;background:var(--green);color:white;border:none;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--font-b);white-space:nowrap}
+.btn-ck-no{padding:8px 18px;background:transparent;color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.2);border-radius:20px;font-size:13px;cursor:pointer;font-family:var(--font-b);white-space:nowrap}
+@media(max-width:580px){.cookie-bar{flex-direction:column;align-items:flex-start}}
+
+/* ═══════════════════════════════
+   MAINTENANCE BANNER
+═══════════════════════════════ */
+.maint-banner{position:fixed;top:0;left:0;right:0;z-index:1000;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;display:none}
+.maint-banner.on{display:flex}
+.maint-ok{background:var(--green);color:white;border-bottom:2px solid rgba(0,0,0,.1)}
+.maint-warn{background:var(--amber);color:white;border-bottom:2px solid rgba(0,0,0,.1)}
+.maint-error{background:var(--red);color:white;border-bottom:2px solid rgba(0,0,0,.1)}
+.maint-text{display:flex;align-items:center;gap:8px;font-weight:600}
+.maint-close{background:rgba(255,255,255,.25);border:none;color:white;width:24px;height:24px;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* ═══════════════════════════════
+   ANIMATIONS
+═══════════════════════════════ */
+@keyframes fd{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+@keyframes ring{0%{opacity:0;transform:scale(.9)}50%{opacity:.3;transform:scale(1.1)}100%{opacity:0;transform:scale(1.2)}}
+@keyframes dot{0%,80%,100%{transform:scale(.8);opacity:.4}40%{transform:scale(1.2);opacity:1}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<!-- BANNIÈRE MAINTENANCE -->
+<div class="maint-banner" id="maint-banner">
+  <div class="maint-text" id="maint-text">✅ SimuAE fonctionne normalement</div>
+  <button class="maint-close" onclick="document.getElementById('maint-banner').classList.remove('on')">✕</button>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5" opacity=".6"/></svg></div>
+      Simu<em>AE</em>
+    </a>
+    <span class="nav-tag">Copilote financier AE 2026</span>
+    <div class="nav-right">
+      <a href="/blog" class="nav-link">Guides</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#simulateur" class="btn-nav">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
+        Simuler
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="simulateur">
+  <div class="hero-eye"><span class="live-dot"></span>Barèmes URSSAF 2026 officiels · Décret n°2026-69</div>
+  <h1>Simulateur auto-entrepreneur 2026 — <span class="accent">votre copilote financier</span></h1>
+  <p class="hero-sub">Calculez votre revenu net en 30 secondes. Trésorerie, alertes, projections 12 mois — un assistant qui anticipe et guide vos décisions financières.</p>
+  <div class="trust-bar">
+    <div class="trust-item"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.6l-3 2.9.7 4.1L8 10.7l-3.7 1.9.7-4.1L2 5.6l4.2-.6L8 1z"/></svg>Taux URSSAF 2026 officiels</div>
+    <div class="trust-item"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.6l-3 2.9.7 4.1L8 10.7l-3.7 1.9.7-4.1L2 5.6l4.2-.6L8 1z"/></svg><span id="stat-simus">14 832</span> simulations</div>
+    <div class="trust-item"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.6l-3 2.9.7 4.1L8 10.7l-3.7 1.9.7-4.1L2 5.6l4.2-.6L8 1z"/></svg>PDF bancaire téléchargeable</div>
+    <div class="trust-item"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.8 3.6L14 5.6l-3 2.9.7 4.1L8 10.7l-3.7 1.9.7-4.1L2 5.6l4.2-.6L8 1z"/></svg>Paiement sécurisé Stripe</div>
+  </div>
+  <div class="pills">
+    <span class="pill b"><svg viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="4"/></svg>Revenu net exact</span>
+    <span class="pill g"><svg viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="4"/></svg>Trésorerie mois/mois</span>
+    <span class="pill a"><svg viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="4"/></svg>Alertes automatiques</span>
+    <span class="pill v"><svg viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="4"/></svg>Projections 12 mois</span>
+    <span class="pill"><svg viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="4"/></svg>Aide à la décision</span>
+    <span class="pill"><svg viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="4"/></svg>Comparateur statuts</span>
+    <span class="pill"><svg viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="4"/></svg>Score de viabilité /10</span>
+    <span class="pill"><svg viewBox="0 0 12 12" fill="currentColor"><circle cx="6" cy="6" r="4"/></svg>TJM & objectif inversé</span>
+  </div>
+</header>
+
+<!-- DIFFÉRENCIATION -->
+<section class="diff-wrap">
+  <div class="diff-grid">
+    <div class="diff-card"><div class="diff-vs">URSSAF gratuit</div><div class="diff-them">Calcul simple, aucun accompagnement</div><div class="diff-us">SimuAE : calcul + alertes + décisions</div></div>
+    <div class="diff-card"><div class="diff-vs">Simulateurs classiques</div><div class="diff-them">Un résultat, aucune action proposée</div><div class="diff-us">SimuAE : résultat + prochaine étape</div></div>
+    <div class="diff-card"><div class="diff-vs">Excel / tableaux</div><div class="diff-them">Compliqué, pas mobile, pas d'alertes</div><div class="diff-us">SimuAE : simple, intelligent, alertes auto</div></div>
+    <div class="diff-card"><div class="diff-vs">Indy / outils gratuits</div><div class="diff-them">Comptabilité, pas de copilote décisionnel</div><div class="diff-us">SimuAE : anticipe et guide vos choix</div></div>
+  </div>
+</section>
+
+<!-- ONGLETS -->
+<div class="tabs-wrap">
+  <div class="tabs-bar" role="tablist" aria-label="Modules SimuAE">
+    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-simu" id="btn-simu" onclick="switchTab('simu',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 12l2 2 4-4"/></svg><span>Simulateur</span>
+    </button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-tres" id="btn-tres" onclick="switchTab('tres',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span>Trésorerie</span>
+    </button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-proj" id="btn-proj" onclick="switchTab('proj',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span>Projections</span>
+    </button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-alert" id="btn-alert" onclick="switchTab('alert',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span>Alertes</span>
+    </button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-aide" id="btn-aide" onclick="switchTab('aide',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span>Décision</span>
+    </button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-comp" id="btn-comp" onclick="switchTab('comp',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg><span>Statuts</span>
+    </button>
+  </div>
+</div>
+
+<!-- CONTENU ONGLETS -->
+<main class="main-wrap">
+
+  <!-- ═══ TAB 1 : SIMULATEUR ═══ -->
+  <div class="tab-panel active" id="tab-simu">
+    <div class="card">
+      <div class="card-top">
+        <div class="card-brand">
+          <div class="ai-dot"></div>
+          <div><div class="card-title">SimuAE — Copilote IA</div><div class="card-sub">En ligne · Barèmes 2026 à jour</div></div>
+        </div>
+        <span class="pill" style="font-size:11px">Résultat en temps réel</span>
+      </div>
+      <div class="card-body">
+
+        <!-- OBJECTIF INVERSÉ -->
+        <div class="inv-box">
+          <div class="inv-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Objectif de revenu net (calcul inversé)</div>
+          <div class="inv-row">
+            <div class="inp-wrap" style="max-width:170px"><span class="inp-pre">€</span><input type="number" id="inv-net" placeholder="ex: 2000" min="0" step="100" inputmode="numeric" oninput="calcInverse()"></div>
+            <div class="inv-result" id="inv-result">→ Entrez votre objectif</div>
+          </div>
+        </div>
+
+        <!-- CHAMPS -->
+        <div class="field">
+          <label class="label" for="ca">Chiffre d'affaires <small>mensuel (€)</small></label>
+          <div class="inp-wrap"><span class="inp-pre">€</span><input type="number" id="ca" placeholder="ex: 3000" min="0" max="25000" step="50" inputmode="numeric" oninput="calculerLive()"></div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label class="label" for="type">Type d'activité</label>
+            <div class="sel-wrap"><select id="type" onchange="calculerLive()">
+              <option value="">— Choisir —</option>
+              <option value="bic_service">Prestations de services BIC</option>
+              <option value="bnc">Professions libérales BNC</option>
+              <option value="bic_vente">Vente de marchandises BIC</option>
+              <option value="cipav">Libéral réglementé CIPAV</option>
+            </select></div>
+          </div>
+          <div class="field">
+            <label class="label" for="jours">Jours facturables <small>/mois</small></label>
+            <input type="number" id="jours" value="18" min="1" max="25" step="1" inputmode="numeric" oninput="calculerLive()">
+          </div>
+        </div>
+        <div class="toggle-row acre-bg" onclick="document.getElementById('acre').click()">
+          <input type="checkbox" id="acre" onchange="calculerLive()">
+          <div class="toggle-label">Bénéficiez-vous de l'ACRE ?<small>Exonération 50% → réduit à 25% au 1er juillet 2026 · Décret n°2026-69</small></div>
+        </div>
+        <div class="toggle-row vl-bg" onclick="document.getElementById('vl').click()">
+          <input type="checkbox" id="vl" onchange="calculerLive()">
+          <div class="toggle-label">Option versement libératoire (VL) ?<small>Payer IR + cotisations ensemble — vérifiez votre éligibilité (revenu N-2)</small></div>
+        </div>
+
+        <!-- LOADER -->
+        <div class="ia-bar" id="ia-bar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+          <span class="ia-bar-text">SimuAE analyse votre situation</span>
+          <div class="dots"><span></span><span></span><span></span></div>
+        </div>
+      </div><!-- /card-body -->
+
+      <!-- RÉSULTAT -->
+      <div class="result-zone" id="result-zone">
+
+        <!-- SCORE VIABILITÉ (desktop) -->
+        <div class="score-section" id="score-sec">
+          <div class="score-label">Score de viabilité SimuAE <span class="score-num-badge" id="score-num"></span>/10</div>
+          <div class="score-bar-bg"><div class="score-bar-fill" id="score-bar"></div></div>
+        </div>
+
+        <!-- FOURCHETTE GRATUIT (floue) -->
+        <div class="range-bloc">
+          <div class="range-header">Revenu net estimé — fourchette indicative</div>
+          <div class="range-nums">
+            <span class="range-low" id="range-low">—</span>
+            <span class="range-sep">à</span>
+            <span class="range-high" id="range-high">—</span>
+            <span class="range-unit">€/mois</span>
+          </div>
+          <div class="range-note" id="range-note">Entrez votre CA pour voir l'estimation</div>
+        </div>
+
+        <!-- MÉDIANE -->
+        <div class="mediane-row" id="mediane-row" style="display:none">
+          <span class="icon">📊</span>
+          <span id="mediane-text">Dans la moyenne nationale</span>
+        </div>
+
+        <!-- RÉPARTITION ARGENT -->
+        <div class="repartition-grid" id="rep-grid">
+          <div class="rep-card r-green"><div class="rep-icon">💰</div><div class="rep-lbl">Argent dispo</div><div class="rep-val" id="rep-dispo">—</div><div class="rep-note">Net après tout</div></div>
+          <div class="rep-card r-red"><div class="rep-icon">📤</div><div class="rep-lbl">À mettre de côté</div><div class="rep-val" id="rep-coti">—</div><div class="rep-note" id="rep-coti-note">Cotisations URSSAF</div></div>
+          <div class="rep-card r-amber"><div class="rep-icon">🏛️</div><div class="rep-lbl">Impôt estimé</div><div class="rep-val" id="rep-ir">—</div><div class="rep-note">Provision IR mensuelle</div></div>
+          <div class="rep-card r-blue"><div class="rep-icon">📅</div><div class="rep-lbl">TJM minimal</div><div class="rep-val" id="rep-tjm">—</div><div class="rep-note" id="rep-tjm-note">Pour ce CA</div></div>
+        </div>
+
+        <!-- CONSEIL IA -->
+        <div class="conseil-ia" id="conseil-ia">
+          <div class="conseil-ia-hd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Conseil SimuAE</div>
+          <div class="conseil-ia-text" id="conseil-text">Entrez votre CA pour recevoir un conseil personnalisé.</div>
+        </div>
+
+        <!-- FREEMIUM WALL -->
+        <div id="fw-wall">
+          <div class="fw-preview">
+            <div class="fw-row"><span>Cotisations URSSAF exactes</span><span>••• €</span></div>
+            <div class="fw-row"><span>Simulation ACRE personnalisée</span><span>−••• €</span></div>
+            <div class="fw-row"><span>Micro vs SASU vs EURL — net comparé</span><span>••• €</span></div>
+            <div class="fw-row"><span>Projection 12 mois avec seuil TVA</span><span>mois •</span></div>
+            <div class="fw-row"><span>Rapport PDF bancaire complet</span><span>6 pages</span></div>
+          </div>
+          <div class="fw-title">Rapport complet + Copilote financier</div>
+          <div class="fw-sub">Chiffre précis, comparatif 3 statuts, projections, PDF bancaire</div>
+          <div class="choice-grid">
+            <div class="ch-card" onclick="payer(9)">
+              <div class="ch-price">9€</div>
+              <div class="ch-title">Rapport seul</div>
+              <ul class="ch-list"><li>Revenu net précis</li><li>Simulation ACRE</li><li>Comparatif 3 statuts</li><li>Projection 12 mois</li><li>PDF bancaire 6 pages</li><li>Affiliations banque pro</li></ul>
+            </div>
+            <div class="ch-card feat" onclick="payer(19.99)">
+              <div class="ch-badge">⭐ MEILLEUR CHOIX</div>
+              <div class="ch-price">19,99€</div>
+              <div class="ch-title">Pack Complet IA</div>
+              <ul class="ch-list"><li>Tout du rapport 9€</li><li>Simulateur trésorerie</li><li>Projections 12 mois</li><li>Alertes URSSAF auto</li><li>Aide à la décision</li><li>TJM & objectif inversé</li><li>100 prompts IA métier</li><li>Mises à jour 2027</li></ul>
+            </div>
+          </div>
+          <div class="share-btns">
+            <button class="btn-share" onclick="partager()">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              Partager mon résultat
+            </button>
+            <button class="btn-share" onclick="emailResultat()">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Recevoir par email
+            </button>
+          </div>
+        </div>
+      </div><!-- /result-zone -->
+
+      <!-- PROMPTPRO -->
+      <div class="pp-section" id="pp-section">
+        <div class="pp-top"><div class="pp-chip">GRATUIT</div><div class="pp-title">3 prompts ChatGPT pour votre métier</div></div>
+        <p class="pp-sub">Choisissez votre métier — 3 prompts opérationnels pour gagner du temps aujourd'hui :</p>
+        <div class="metier-btns">
+          <button class="met-btn" onclick="selectM(this,'vtc')" data-m="vtc">🚗 VTC/Livreur</button>
+          <button class="met-btn" onclick="selectM(this,'dev')" data-m="dev">💻 Dev/IT</button>
+          <button class="met-btn" onclick="selectM(this,'consultant')" data-m="consultant">📊 Consultant</button>
+          <button class="met-btn" onclick="selectM(this,'graphiste')" data-m="graphiste">🎨 Graphiste</button>
+          <button class="met-btn" onclick="selectM(this,'redacteur')" data-m="redacteur">✍️ Rédacteur</button>
+          <button class="met-btn" onclick="selectM(this,'artisan')" data-m="artisan">🔧 Artisan</button>
+          <button class="met-btn" onclick="selectM(this,'coach')" data-m="coach">📚 Coach</button>
+          <button class="met-btn" onclick="selectM(this,'marketing')" data-m="marketing">📱 Marketing</button>
+          <button class="met-btn" onclick="selectM(this,'photo')" data-m="photo">📸 Photo/Vidéo</button>
+          <button class="met-btn" onclick="selectM(this,'sante')" data-m="sante">🏥 Santé</button>
+          <button class="met-btn" onclick="selectM(this,'ecom')" data-m="ecom">🛍️ E-commerce</button>
+          <button class="met-btn" onclick="selectM(this,'autre')" data-m="autre">✨ Autre</button>
+        </div>
+        <div class="prompt-list" id="prompt-list"></div>
+        <button class="pp-cta" onclick="voirPrompts()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Voir les 100 prompts complets → promptpro.ai
+        </button>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats-row">
+        <div><div class="stat-num" id="counter-1">14.8k</div><div class="stat-label">simulations cette semaine</div></div>
+        <div><div class="stat-num">2026</div><div class="stat-label">barèmes URSSAF officiels</div></div>
+        <div><div class="stat-num">30s</div><div class="stat-label">résultat garanti</div></div>
+      </div>
+
+    </div><!-- /card -->
+  </div>
+
+  <!-- ═══ TAB 2 : TRÉSORERIE ═══ -->
+  <div class="tab-panel" id="tab-tres">
+    <div class="card">
+      <div class="card-top"><div class="card-brand"><div class="ai-dot"></div><div><div class="card-title">Trésorerie & Provisions</div><div class="card-sub">Combien mettre de côté chaque mois</div></div></div></div>
+      <div class="tres-grid" id="tres-grid">
+        <div><div class="tres-lbl">À provisionner URSSAF</div><div class="tres-val" id="tres-urssaf">—</div><div class="tres-note">À mettre de côté chaque mois</div></div>
+        <div><div class="tres-lbl">À provisionner IR</div><div class="tres-val" id="tres-ir">—</div><div class="tres-note">Provision impôt mensuelle</div></div>
+        <div><div class="tres-lbl">Total à mettre de côté</div><div class="tres-val" id="tres-total" style="color:var(--red)">—</div><div class="tres-note" id="tres-pct">du CA</div></div>
+        <div><div class="tres-lbl">Argent vraiment disponible</div><div class="tres-val" id="tres-dispo" style="color:var(--green)">—</div><div class="tres-note">Après toutes les charges</div></div>
+      </div>
+      <div class="pbar-section">
+        <div class="pbar-lbl">Répartition de votre CA</div>
+        <div class="pbar-bg"><div class="pbar-fill" id="pb-urssaf" style="width:0;background:var(--red)"></div></div>
+        <div class="pbar-bg"><div class="pbar-fill" id="pb-ir" style="width:0;background:var(--amber)"></div></div>
+        <div class="pbar-bg"><div class="pbar-fill" id="pb-dispo" style="width:0;background:var(--green)"></div></div>
+        <div class="pbar-legend">
+          <div class="pleg"><div class="pleg-dot" style="background:var(--red)"></div>Cotisations URSSAF</div>
+          <div class="pleg"><div class="pleg-dot" style="background:var(--amber)"></div>Impôt sur le revenu</div>
+          <div class="pleg"><div class="pleg-dot" style="background:var(--green)"></div>Disponible</div>
+        </div>
+      </div>
+      <div class="cal-section">
+        <div class="cal-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Prochaines déclarations URSSAF (trimestrielles)</div>
+        <div class="cal-grid" id="cal-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TAB 3 : PROJECTIONS ═══ -->
+  <div class="tab-panel" id="tab-proj">
+    <div class="card">
+      <div class="card-top"><div class="card-brand"><div class="ai-dot"></div><div><div class="card-title">Projections intelligentes</div><div class="card-sub">Dans 3 mois vous paierez exactement…</div></div></div></div>
+      <div class="proj-body">
+        <div class="proj-controls">
+          <label for="growth">Croissance mensuelle :</label>
+          <input type="range" class="proj-slider" id="growth" min="-10" max="20" value="5" step="1" oninput="updateProj()">
+          <div class="proj-val" id="growth-val">+5%/mois</div>
+        </div>
+        <div class="chart-area" id="chart-area">
+          <div class="chart-bars" id="chart-bars"></div>
+          <div class="plafond-line" id="plafond-line" style="bottom:0"><span class="plafond-badge">Plafond AE</span></div>
+        </div>
+        <div class="insights" id="proj-insights"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TAB 4 : ALERTES ═══ -->
+  <div class="tab-panel" id="tab-alert">
+    <div class="card">
+      <div class="card-top"><div class="card-brand"><div class="ai-dot"></div><div><div class="card-title">Alertes automatiques</div><div class="card-sub">Anticipez avant les problèmes</div></div></div></div>
+      <div class="alertes-body" id="alertes-body">
+        <div class="alerte info"><div class="alerte-icon">💡</div><div><div class="alerte-title"><span class="sev-dot sd-b"></span>En attente de simulation</div><div class="alerte-text">Entrez votre CA dans l'onglet Simulateur pour recevoir vos alertes personnalisées.</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TAB 5 : AIDE À LA DÉCISION ═══ -->
+  <div class="tab-panel" id="tab-aide">
+    <div class="card">
+      <div class="card-top"><div class="card-brand"><div class="ai-dot"></div><div><div class="card-title">Aide à la décision</div><div class="card-sub">Ce que vous devez faire maintenant</div></div></div></div>
+      <div class="aide-body" id="aide-body">
+        <div class="dec-card"><div class="dec-q"><span class="dec-q-icon">💬</span>Simulez d'abord pour voir vos recommandations</div><div class="dec-a">Entrez votre CA mensuel dans l'onglet Simulateur. SimuAE analysera votre situation et vous donnera des conseils concrets sur vos prix, provisions et prochaines étapes.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TAB 6 : COMPARATEUR ═══ -->
+  <div class="tab-panel" id="tab-comp">
+    <div class="card">
+      <div class="card-top"><div class="card-brand"><div class="ai-dot"></div><div><div class="card-title">Comparateur de statuts</div><div class="card-sub">Micro, SASU, EURL — lequel vous correspond ?</div></div></div></div>
+      <div class="comp-body">
+        <div class="comp-wrap"><table class="comp-table"><thead><tr><th>Critère</th><th>Micro-entreprise</th><th>EURL (IS)</th><th>SASU (IS)</th></tr></thead><tbody id="comp-tbody"></tbody></table></div>
+        <div class="comp-rec" id="comp-rec"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Entrez votre CA dans le simulateur pour voir la recommandation personnalisée.</span></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- FAQ AEO -->
+<section class="faq-section" id="faq">
+  <h2 class="section-hed">Questions fréquentes</h2>
+  <div id="faq-ctr"></div>
+</section>
+
+<!-- MAILLAGE INTERNE -->
+<section class="int-section">
+  <h2 class="section-hed" style="font-size:18px;text-align:left;margin-bottom:14px">Guides & ressources</h2>
+  <div class="int-grid">
+    <a href="/acre-2026" class="int-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>ACRE 2026 — guide complet</a>
+    <a href="/plafonds-2026" class="int-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>Plafonds 2026 — tout savoir</a>
+    <a href="/micro-entreprise-ou-sasu-2026" class="int-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>Micro ou SASU 2026 ?</a>
+    <a href="/cumul-salarie-ae" class="int-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>Salarié + AE cumulable ?</a>
+    <a href="/facturation-electronique" class="int-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>Facturation électronique 2026</a>
+    <a href="/blog/combien-touche-auto-entrepreneur-2026" class="int-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>Combien touche un AE en 2026 ?</a>
+    <a href="/blog/auto-entrepreneur-3000-euros-mois" class="int-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>AE à 3000€/mois — simulation</a>
+    <a href="/blog/depasser-plafond-micro-entreprise-que-faire" class="int-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>Dépasser le plafond AE</a>
+    <a href="/taux.json" class="int-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>Barèmes URSSAF 2026 (source)</a>
+    <a href="/a-propos" class="int-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>À propos de SimuAE</a>
+  </div>
+</section>
+
+<!-- DISCLAIMER + MENTIONS LÉGALES -->
+<div class="legal-section">
+  <div class="disclaimer">
+    <strong>⚠️ Avertissement légal important</strong> — Les résultats fournis par SimuAE sont des <strong>estimations indicatives</strong> basées sur les barèmes URSSAF officiels 2026. Ils <strong>ne constituent pas un conseil comptable, fiscal ou juridique</strong> et ne remplacent pas l'avis d'un expert-comptable ou conseiller financier agréé. SimuAE n'est pas un expert-comptable et ne se présente pas comme tel. Pour toute décision financière ou fiscale importante, consultez un professionnel qualifié. Source : <a href="https://autoentrepreneur.urssaf.fr" target="_blank" rel="noopener">autoentrepreneur.urssaf.fr</a> · Décret n°2026-69 du 6 février 2026.
+  </div>
+  <div class="legal-block">
+    <strong>Mentions légales :</strong> SimuAE est édité par Steeve Marboeuf — France — SIRET :  83232573200010 — Email : digital.help.services@gmail.com · Hébergeur : Vercel Inc., 340 Pine Street Suite 600, San Francisco, CA 94104, USA · Directeur de publication : Steeve Marboeuf · <a href="/politique-confidentialite">Politique de confidentialité</a> · <a href="/cgu">CGU</a> · <a href="/cgv">CGV</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-ai-tag"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>Copilote IA · Mis à jour 1er janvier 2026</div>
+  <nav>
+    <a href="/mentions-legales">Mentions légales</a>
+    <a href="/politique-confidentialite">Confidentialité</a>
+    <a href="/cgu">CGU</a><a href="/cgv">CGV</a>
+    <a href="/faq">FAQ</a><a href="/blog">Guides</a><a href="/a-propos">À propos</a>
+    <a href="mailto:contact@simuae.fr">Contact</a>
+  </nav>
+  <p style="margin-top:12px;font-size:11px;color:var(--ink-3)">SimuAE n'est pas affilié à l'URSSAF ni à l'administration fiscale. © 2026 SimuAE · <a href="https://autoentrepreneur.urssaf.fr" target="_blank" rel="noopener" style="color:var(--ink-3)">Source URSSAF</a></p>
+</footer>
+
+<!-- CHATBOT -->
+<button class="chat-fab" onclick="toggleChat()">
+  <div class="chat-ring"></div>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</button>
+<div class="chat-panel" id="chat-panel">
+  <div class="chat-head">
+    <div><div class="chat-head-name">Simu — Votre copilote AE</div><div class="chat-head-desc">Posez vos questions business</div></div>
+    <button class="chat-close" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="chat-msgs" id="chat-msgs">
+    <div class="msg-b">Bonjour ! Je suis Simu, votre copilote financier AE. Posez-moi vos questions sur vos cotisations, trésorerie, plafonds, prix à fixer...</div>
+  </div>
+  <div class="chat-inp-row">
+    <input class="chat-inp" id="chat-inp" type="text" placeholder="Ex: Combien mettre de côté ce mois ?" onkeypress="if(event.key==='Enter')sendMsg()">
+    <button class="chat-send" onclick="sendMsg()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+  </div>
+</div>
+
+<!-- STICKY MOBILE -->
+<div class="sticky-m" id="sticky-m">
+  <button class="sticky-btn" onclick="document.getElementById('fw-wall').scrollIntoView({behavior:'smooth'})">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    Rapport complet — 9€
+  </button>
+</div>
+
+<!-- EXIT -->
+<div class="exit-ov" id="exit-ov">
+  <div class="exit-modal">
+    <span class="exit-emoji">💡</span>
+    <div class="exit-title">Votre analyse n'est pas terminée !</div>
+    <div class="exit-sub">Vous n'avez pas encore vu votre revenu précis, vos alertes et vos projections. Rapport complet pour 9€.</div>
+    <button class="btn-nav" style="width:100%;justify-content:center;padding:13px;border-radius:12px;font-size:14px" onclick="payer(9);closeExit()">Obtenir mon rapport — 9€</button>
+    <button class="exit-dismiss" onclick="closeExit()">Non merci, je pars sans mon analyse</button>
+  </div>
+</div>
+
+<!-- COOKIE -->
+<div id="cookie-bar" class="cookie-bar">
+  <div class="cookie-text">SimuAE utilise des cookies analytiques anonymes. Aucune donnée personnelle n'est vendue. <a href="/politique-confidentialite">Politique de confidentialité</a> · <a href="/cgu">CGU</a></div>
+  <div class="cookie-btns">
+    <button class="btn-ck-ok" onclick="acceptCookie()">Accepter</button>
+    <button class="btn-ck-no" onclick="refuseCookie()">Refuser</button>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════
+// BARÈMES 2026 OFFICIELS
+// ═══════════════════════════════════
+const T = {
+  coti:  { bic_service:.212, bnc:.256, bic_vente:.123, cipav:.232 },
+  acre:  { bic_service:.106, bnc:.128, bic_vente:.0615, cipav:.116 },
+  vl:    { bic_service:.017, bnc:.022, bic_vente:.01, cipav:.022 },
+  abat:  { bic_service:.5,   bnc:.34,  bic_vente:.71,  cipav:.34 },
+  plaf:  { bic_service:77700, bnc:77700, bic_vente:188700, cipav:77700 },
+  tva:   { bic_service:37500, bnc:37500, bic_vente:85000, cipav:37500 },
+  med:   { bic_service:1647, bnc:1834, bic_vente:1420, cipav:2100 },
+  ir: [{mn:0,mx:11294,t:0},{mn:11294,mx:28797,t:.11},{mn:28797,mx:82341,t:.3},{mn:82341,mx:177106,t:.41},{mn:177106,mx:999999,t:.45}]
+};
+
+// ═══════════════════════════════════
+// ÉTAT
+// ═══════════════════════════════════
+let S = { ca:0, type:'bic_service', acre:false, vl:false, jours:18 };
+let hasSimu = false, exitShown = false;
+
+// ═══════════════════════════════════
+// CALCULS
+// ═══════════════════════════════════
+function calcIR(baseAn) {
+  let ir=0;
+  for(const t of T.ir){ if(baseAn>t.mn) ir+=(Math.min(baseAn,t.mx)-t.mn)*t.t; }
+  return ir/12;
+}
+
+function calc(ca, type, acre, vl) {
+  if(!ca||!type) return null;
+  const tc = acre ? T.acre[type] : T.coti[type];
+  const coti = Math.round(ca*tc);
+  const baseAn = ca*12*(1-T.abat[type]);
+  const ir = Math.round(vl ? ca*T.vl[type] : calcIR(baseAn));
+  const prov = coti+ir;
+  const net = ca-prov;
+  const tjm = S.jours>0 ? Math.round(ca/S.jours) : 0;
+  const pct = ca>0 ? Math.round(prov/ca*100) : 0;
+  return { coti, ir, prov, net, tjm, pct, tc };
+}
+
+function fmt(n){ return Math.round(n).toLocaleString('fr-FR'); }
+function fmtE(n){ return fmt(n)+'€'; }
+
+// ═══════════════════════════════════
+// CALCUL LIVE
+// ═══════════════════════════════════
+let dbt;
+function calculerLive() {
+  const ca = parseFloat(document.getElementById('ca').value)||0;
+  const type = document.getElementById('type').value;
+  S = { ca, type:type||'bic_service', acre:document.getElementById('acre').checked, vl:document.getElementById('vl').checked, jours:parseInt(document.getElementById('jours').value)||18 };
+  if(!ca) return;
+  const bar = document.getElementById('ia-bar');
+  bar.classList.add('on');
+  clearTimeout(dbt);
+  dbt = setTimeout(()=>{
+    bar.classList.remove('on');
+    updateAll();
+    hasSimu=true;
+    if(ca>300) document.getElementById('sticky-m').classList.add('on');
+    gtag&&gtag('event','simulation',{ca,type,acre:S.acre});
+    try{ localStorage.setItem('simuae_last',JSON.stringify({...S,ts:Date.now()})); }catch(e){}
+  }, 420);
+}
+
+function updateAll() {
+  const r = calc(S.ca, S.type, S.acre, S.vl);
+  if(!r) return;
+  updateSimu(r);
+  updateTresorerie(r);
+  updateProj();
+  updateAlertes(r);
+  updateAide(r);
+  updateComp(r);
+}
+
+// ═══════════════════════════════════
+// TAB 1 : SIMULATEUR
+// ═══════════════════════════════════
+function updateSimu(r) {
+  document.getElementById('result-zone').classList.add('on');
+
+  // Score viabilité
+  const score = calcScore(S.ca, r.tc, S.ca*12, S.type);
+  document.getElementById('score-num').textContent = score.toFixed(1);
+  setTimeout(()=>{ document.getElementById('score-bar').style.width=(score/10*100)+'%'; },100);
+
+  // Fourchette gratuit (flou)
+  const lo = Math.round(r.net*0.92), hi = Math.round(r.net*1.08);
+  document.getElementById('range-low').textContent = fmt(lo);
+  document.getElementById('range-high').textContent = fmt(hi);
+  document.getElementById('range-note').textContent = `Sur ${fmtE(S.ca)} de CA — estimation avant impôt précis`;
+
+  // Médiane
+  const med = T.med[S.type];
+  const pct = Math.round((r.net/med-1)*100);
+  const mr = document.getElementById('mediane-row');
+  mr.style.display='flex';
+  const mt = document.getElementById('mediane-text');
+  if(Math.abs(pct)<8) mt.innerHTML=`Dans la moyenne nationale des AE : médiane <strong>${fmtE(med)}/mois</strong>`;
+  else if(pct>0) mt.innerHTML=`Revenu <span class="mediane-pos">+${pct}% au-dessus</span> de la médiane nationale (${fmtE(med)}/mois)`;
+  else mt.innerHTML=`Revenu <strong>${Math.abs(pct)}% en dessous</strong> de la médiane nationale (${fmtE(med)}/mois)`;
+
+  // Répartition
+  document.getElementById('rep-dispo').textContent = fmtE(r.net);
+  document.getElementById('rep-coti').textContent = fmtE(r.coti);
+  document.getElementById('rep-coti-note').textContent = `${Math.round(r.tc*100)}% du CA`;
+  document.getElementById('rep-ir').textContent = fmtE(r.ir);
+  document.getElementById('rep-tjm').textContent = fmtE(r.tjm)+'/j';
+  document.getElementById('rep-tjm-note').textContent = `Sur ${S.jours} jours facturables`;
+
+  // Conseil IA
+  updateConseil(r);
+
+  // PromptPro
+  document.getElementById('pp-section').classList.add('on');
+  autoSelectMetier();
+}
+
+function calcScore(ca, tc, caAn, type) {
+  let s=5;
+  if(ca>=2000) s+=1;
+  if(ca>=3500) s+=1;
+  if(tc<0.22) s+=1;
+  if(caAn<T.plaf[type]*0.6) s+=1;
+  if(document.getElementById('acre').checked) s+=0.5;
+  return Math.min(s,10);
+}
+
+function updateConseil(r) {
+  const el = document.getElementById('conseil-text');
+  const ca = S.ca;
+  const plafM = T.plaf[S.type]/12;
+  const pctPlaf = Math.round(ca/plafM*100);
+  let c='';
+  if(!S.acre){
+    const eco = Math.round(ca*(T.coti[S.type]-T.acre[S.type]));
+    c+=`<strong>Avant le 1er juillet 2026</strong>, l'ACRE vous ferait économiser <strong>${fmtE(eco)}/mois</strong> en cotisations. `;
+  }
+  if(pctPlaf>=75) c+=`⚠️ Votre CA représente <strong>${pctPlaf}% du plafond mensuel</strong> — surveillez votre CA annuel de près. `;
+  const caObj2k = Math.round(2000/(1-r.tc)+r.ir*1.2);
+  if(ca<caObj2k) c+=`Pour atteindre <strong>2 000€ nets/mois</strong>, facturez <strong>${fmtE(caObj2k)}/mois</strong> (${fmtE(Math.round(caObj2k/Math.max(1,S.jours)))}/jour). `;
+  const net15 = Math.round(ca*1.15*(1-r.tc)-r.ir);
+  if(r.net<2500) c+=`Une hausse de <strong>15% de vos tarifs</strong> → <strong>${fmtE(net15)}€ nets/mois</strong> (+${fmtE(net15-r.net)}).`;
+  el.innerHTML = c||`Sur ${fmtE(ca)}€ de CA, vous gardez <strong>${Math.round(r.net/ca*100)}% de votre chiffre d'affaires</strong>. Cotisations : ${Math.round(r.tc*100)}% · IR estimé : ~${Math.round(r.ir/ca*100)}%.`;
+}
+
+// ═══════════════════════════════════
+// TAB 2 : TRÉSORERIE
+// ═══════════════════════════════════
+function updateTresorerie(r) {
+  document.getElementById('tres-urssaf').textContent = fmtE(r.coti);
+  document.getElementById('tres-ir').textContent = fmtE(r.ir);
+  document.getElementById('tres-total').textContent = fmtE(r.prov);
+  document.getElementById('tres-pct').textContent = `${r.pct}% de votre CA`;
+  document.getElementById('tres-dispo').textContent = fmtE(r.net);
+  const ca = S.ca;
+  if(ca>0) setTimeout(()=>{
+    document.getElementById('pb-urssaf').style.width=Math.min(100,Math.round(r.coti/ca*100))+'%';
+    document.getElementById('pb-ir').style.width=Math.min(100,Math.round(r.ir/ca*100))+'%';
+    document.getElementById('pb-dispo').style.width=Math.min(100,Math.round(r.net/ca*100))+'%';
+  },100);
+  // Calendrier
+  const grid=document.getElementById('cal-grid');
+  const now=new Date();
+  const months=['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Août','Sep','Oct','Nov','Déc'];
+  const declaM=[3,6,9,12];
+  grid.innerHTML='';
+  for(let i=0;i<12;i++){
+    const mIdx=(now.getMonth()+i)%12;
+    const isD=declaM.includes(mIdx+1);
+    const d=document.createElement('div');
+    d.className='cal-m'+(isD?' decla':'');
+    d.innerHTML=`<div class="cal-m-name">${months[mIdx]}</div>${isD?`<div class="cal-m-amt">${fmtE(r.coti*3)}</div><div style="font-size:9px;color:var(--amber);font-weight:700">DÉCLA</div>`:'<div style="font-size:10px;color:var(--ink-3)">—</div>'}`;
+    grid.appendChild(d);
+  }
+}
+
+// ═══════════════════════════════════
+// TAB 3 : PROJECTIONS
+// ═══════════════════════════════════
+function updateProj() {
+  if(!S.ca) return;
+  const growth=parseFloat(document.getElementById('growth').value)/100;
+  document.getElementById('growth-val').textContent=(growth>=0?'+':'')+Math.round(growth*100)+'%/mois';
+  const bars=document.getElementById('chart-bars');
+  bars.innerHTML='';
+  const plafM=T.plaf[S.type]/12;
+  let caP=S.ca, maxCA=0;
+  const data=[];
+  const months=['J','F','M','A','M','J','J','A','S','O','N','D'];
+  const now=new Date();
+  for(let i=0;i<12;i++){ data.push(caP); maxCA=Math.max(maxCA,caP); caP*=(1+growth); }
+  const H=150, scaleMax=Math.max(maxCA,plafM)*1.15;
+  data.forEach((ca,i)=>{
+    const r=calc(ca,S.type,S.acre,S.vl);
+    const ph=Math.round(ca/scaleMax*H);
+    const mIdx=(now.getMonth()+i)%12;
+    const over=ca>plafM;
+    const w=document.createElement('div');
+    w.className='bar-wrap';
+    w.innerHTML=`<div class="bar-val">${fmtE(r?.net||0)}</div><div class="bar" style="height:${ph}px;background:${over?'var(--red)':'var(--blue)'}"></div><div class="bar-lbl">${months[mIdx]}</div>`;
+    bars.appendChild(w);
+  });
+  const plafPx=Math.round(plafM/scaleMax*H);
+  document.getElementById('plafond-line').style.bottom=plafPx+'px';
+  const caFin=data[11];
+  const caAn=data.reduce((a,b)=>a+b,0);
+  const insEl=document.getElementById('proj-insights');
+  const ins=[];
+  const mDep=data.findIndex(c=>c>plafM);
+  if(mDep>=0&&mDep<12) ins.push({cl:'r',icon:'🚨',title:`Dépassement plafond prévu dans ${mDep+1} mois`,text:`Au rythme actuel, votre CA dépassera le plafond de ${fmtE(plafM*12)}€/an. Anticipez votre passage en SASU ou EURL avant cette date.`});
+  if(caFin>S.ca) ins.push({cl:'g',icon:'📈',title:`Croissance prévue : +${Math.round((caFin/S.ca-1)*100)}% sur 12 mois`,text:`CA annuel projeté : ${fmtE(caAn)}€. Net annuel estimé : ${fmtE((calc(caAn/12,S.type,S.acre,S.vl)?.net||0)*12)}€.`});
+  const nextDecla=(calc(data.slice(0,3).reduce((a,b)=>a+b,0)/3*3,S.type,S.acre,S.vl)?.coti||0)*3;
+  if(nextDecla) ins.push({cl:'a',icon:'📅',title:`Prochaine déclaration URSSAF : ${fmtE(nextDecla)} dans ~3 mois`,text:`Provisionnez ${fmtE(Math.round(nextDecla/3))}/mois dès maintenant sur un compte dédié.`});
+  ins.push({cl:'b',icon:'💡',title:'Conseil optimisation',text:`À votre trajectoire, une hausse de 10% de vos tarifs représenterait ${fmtE(Math.round(S.ca*.1*(1-r.tc)))}€ de revenus nets supplémentaires par mois.`});
+  insEl.innerHTML=ins.map(i=>`<div class="insight ${i.cl}"><div class="insight-icon">${i.icon}</div><div><div class="insight-title">${i.title}</div><div class="insight-text">${i.text}</div></div></div>`).join('');
+  // r est defini plus haut
+  function r() { return calc(S.ca,S.type,S.acre,S.vl); }
+}
+document.getElementById('growth').addEventListener('input',updateProj);
+
+// ═══════════════════════════════════
+// TAB 4 : ALERTES
+// ═══════════════════════════════════
+function updateAlertes(r) {
+  const el=document.getElementById('alertes-body');
+  const ca=S.ca, caAn=ca*12;
+  const plafM=T.plaf[S.type]/12;
+  const pctPlaf=Math.round(ca/plafM*100);
+  const tvaSeuil=T.tva[S.type];
+  const now=new Date();
+  const nextDeclaMonths=[3,6,9,12];
+  const nextDecla=nextDeclaMonths.find(m=>m>now.getMonth()+1)||3;
+  const days=Math.round((new Date(now.getFullYear(),nextDecla-1,30)-now)/86400000);
+  const als=[];
+  // ACRE
+  if(!S.acre){ const eco=Math.round(ca*(T.coti[S.type]-T.acre[S.type])); als.push({cl:'urg',icon:'🚨',sev:'sd-r',t:'Bénéficiez de l\'ACRE avant le 1er juillet 2026',b:`Le taux passe de 50% à 25% le 1er juillet 2026 (décret n°2026-69). Économie potentielle : ${fmtE(eco)}/mois pendant 1 an. Démarche gratuite sur autoentrepreneur.urssaf.fr.`,a:'Demander l\'ACRE →'}); }
+  else{ als.push({cl:'ok',icon:'✅',sev:'sd-g',t:'ACRE active — économie en cours',b:`L'ACRE vous fait économiser ${fmtE(Math.round(ca*(T.coti[S.type]-T.acre[S.type])))} de cotisations ce mois. Profitez-en jusqu'à sa date d'expiration !`,a:null}); }
+  // Plafond
+  if(pctPlaf>=90) als.push({cl:'urg',icon:'🚨',sev:'sd-r',t:`Plafond AE : ${pctPlaf}% atteint — danger`,b:`Votre CA mensuel approche du plafond annuel de ${fmtE(T.plaf[S.type])}€. Anticipez dès maintenant votre passage en SASU ou EURL.`,a:'Simuler la bascule SASU →'});
+  else if(pctPlaf>=70) als.push({cl:'warn',icon:'⚠️',sev:'sd-a',t:`Plafond AE : ${pctPlaf}% atteint`,b:`À ce rythme, vous risquez un dépassement. CA annuel estimé : ${fmtE(caAn)} / plafond ${fmtE(T.plaf[S.type])}€. Consultez un comptable pour préparer la transition.`,a:'Voir le comparateur statuts →'});
+  else als.push({cl:'ok',icon:'✅',sev:'sd-g',t:`Plafond AE : ${pctPlaf}% — situation sereine`,b:`Votre CA annuel estimé (${fmtE(caAn)}€) est bien en dessous du plafond (${fmtE(T.plaf[S.type])}€). Pas de risque de dépassement à l'horizon.`,a:null});
+  // TVA
+  if(caAn>tvaSeuil) als.push({cl:'urg',icon:'🔴',sev:'sd-r',t:'Seuil TVA dépassé ou imminent',b:`Votre CA annuel estimé (${fmtE(caAn)}€) dépasse le seuil TVA (${fmtE(tvaSeuil)}€). Vous devez facturer et déclarer la TVA trimestriellement.`,a:'Guide TVA →'});
+  else if(caAn>tvaSeuil*.8) als.push({cl:'warn',icon:'⚠️',sev:'sd-a',t:`Seuil TVA : ${Math.round(caAn/tvaSeuil*100)}% atteint`,b:`Attention : à ce rythme vous pourriez dépasser le seuil TVA de ${fmtE(tvaSeuil)}€. Anticipez.`,a:'En savoir plus →'});
+  // Déclaration
+  if(days<=15) als.push({cl:'urg',icon:'📋',sev:'sd-r',t:`Déclaration URSSAF dans ${days} jours !`,b:`N'oubliez pas de déclarer votre CA sur autoentrepreneur.urssaf.fr avant la fin du mois. Montant estimé : ${fmtE(r.coti*3)}.`,a:'Accéder à l\'espace URSSAF →'});
+  else als.push({cl:'info',icon:'📋',sev:'sd-b',t:`Prochaine déclaration dans ${days} jours`,b:`Provisionnez ${fmtE(r.coti)}/mois. Total à payer : ${fmtE(r.coti*3)} à la prochaine déclaration trimestrielle.`,a:null});
+  // IR
+  if(r.ir*12>1500) als.push({cl:'warn',icon:'🏛️',sev:'sd-a',t:`Provision IR : ${fmtE(r.ir)}/mois`,b:`Votre impôt annuel estimé est ${fmtE(r.ir*12)}. Vérifiez si le versement libératoire (${Math.round(T.vl[S.type]*100)}% du CA) vous convient.`,a:'Calculer versement libératoire →'});
+  // Facturation électronique
+  als.push({cl:'info',icon:'🧾',sev:'sd-b',t:'Facturation électronique obligatoire 2026',b:'Depuis le 1er mars 2025 et en vigueur pour les micro-entreprises en 2026 : obligation d\'émettre vos factures sur une Plateforme de Dématérialisation Partenaire (PDP) agréée. Pénalité : 500€ + 15€/facture non conforme.',a:'Choisir une PDP →'});
+  el.innerHTML=als.map(a=>`<div class="alerte ${a.cl}"><div class="alerte-icon">${a.icon}</div><div><div class="alerte-title"><span class="sev-dot ${a.sev}"></span>${a.t}</div><div class="alerte-text">${a.b}</div>${a.a?`<button class="alerte-action">${a.a}</button>`:''}</div></div>`).join('');
+}
+
+// ═══════════════════════════════════
+// TAB 5 : AIDE À LA DÉCISION
+// ═══════════════════════════════════
+function updateAide(r) {
+  const el=document.getElementById('aide-body');
+  const ca=S.ca, tc=r.tc;
+  const f=(net)=>Math.round(net/(1-tc)+r.ir*1.25);
+  const c1500=f(1500),c2000=f(2000),c2500=f(2500),c3000=f(3000);
+  const tjm2k=S.jours>0?Math.round(c2000/S.jours):0;
+  const net10=Math.round(ca*1.1*(1-tc)-r.ir);
+  const net15=Math.round(ca*1.15*(1-tc)-r.ir);
+  const pctP=Math.round(ca/(T.plaf[S.type]/12)*100);
+  const ds=[
+    {i:'💰',q:'Combien dois-je facturer pour atteindre mon objectif ?',a:`<span class="hl">1 500€ nets</span> → ${fmtE(c1500)}/mois · <span class="hl">2 000€ nets</span> → <strong>${fmtE(c2000)}/mois</strong> (${fmtE(tjm2k)}/j sur ${S.jours}j) · <span class="hl">2 500€ nets</span> → ${fmtE(c2500)}/mois · <span class="hl">3 000€ nets</span> → ${fmtE(c3000)}/mois`},
+    {i:'📈',q:'Puis-je augmenter mes prix ? De combien ?',a:`+10% → CA ${fmtE(Math.round(ca*1.1))} → <strong>${fmtE(net10)}€ nets</strong> (+${fmtE(net10-r.net)}) · +15% → CA ${fmtE(Math.round(ca*1.15))} → <strong>${fmtE(net15)}€ nets</strong> (+${fmtE(net15-r.net)}). À votre niveau de CA, une hausse de 15% reste <span class="hl">compétitive</span> dans votre marché.`},
+    {i:'🏦',q:'Combien mettre de côté exactement ?',a:`Chaque encaissement : virer immédiatement <strong>${fmtE(r.prov)}€</strong> sur un compte dédié. Répartition : <span class="hl">${fmtE(r.coti)}€ URSSAF</span> + <span class="hl">${fmtE(r.ir)}€ IR</span> = ${fmtE(r.prov)}€ total (${r.pct}% de votre CA). Ne jamais mélanger avec votre compte courant.`},
+    {i:'🔄',q:'Dois-je changer de statut juridique ?',a:pctP>=70?`Vous utilisez ${pctP}% de votre plafond AE. <strong>Anticipez le passage en SASU ou EURL</strong> avant de dépasser — la transition prend 1-3 mois. Voir l'onglet Statuts pour la comparaison chiffrée avec votre CA.`:`Votre CA (${fmtE(ca)}€/mois) est <span class="hl">bien adapté à la micro-entreprise</span>. La SASU/EURL devient intéressante au-delà de ${fmtE(Math.round(T.plaf[S.type]*.6/12))}€/mois.`},
+    {i:'⏱️',q:'Quand et combien payer à l\'URSSAF ?',a:`Prochaine déclaration trimestrielle : <strong>${fmtE(r.coti*3)}</strong>. Conseil : virer <strong>${fmtE(r.coti)}€ dès chaque paiement client</strong> reçu. Ne déclarez jamais de CA non encaissé — le paiement URSSAF est basé sur le CA encaissé réel.`},
+    {i:'🎯',q:'Comment optimiser ma fiscalité en 2026 ?',a:S.acre?`✅ ACRE active — économie ${fmtE(Math.round(ca*(T.coti[S.type]-T.acre[S.type])))}€/mois. Envisagez le <strong>versement libératoire</strong> si votre revenu fiscal N-2 < 28 797€ : payez l'IR en même temps que les cotisations à taux fixe (${Math.round(T.vl[S.type]*100)}%).`:`Demandez l'ACRE <strong>avant le 1er juillet 2026</strong> : économisez ${fmtE(Math.round(ca*(T.coti[S.type]-T.acre[S.type])))}€/mois pendant 1 an. Vérifiez aussi votre éligibilité au versement libératoire pour simplifier vos paiements.`}
+  ];
+  el.innerHTML=ds.map(d=>`<div class="dec-card"><div class="dec-q"><span class="dec-q-icon">${d.i}</span>${d.q}</div><div class="dec-a">${d.a}</div></div>`).join('');
+}
+
+// ═══════════════════════════════════
+// TAB 6 : COMPARATEUR
+// ═══════════════════════════════════
+function updateComp(r) {
+  const ca=S.ca, caAn=ca*12, nm=r.net;
+  const nE=Math.round(ca*(.55)-Math.round(ca*.45*.45)-r.ir);
+  const nS=Math.round(ca*.5-r.ir*.9);
+  const tbody=document.getElementById('comp-tbody');
+  const rows=[
+    ['Revenu net estimé/mois',nm>nE&&nm>nS?'best':nm<nE&&nm<nS?'comp-bad':'comp-moy',fmtE(nm),nE>nm&&nE>nS?'comp-best':'',fmtE(nE),nS>nm&&nS>nE?'comp-best':'',fmtE(nS)],
+    ['Taux charges sociales','comp-best',Math.round(r.tc*100)+'%','','~45% (TNS)','comp-bad','~82% (assimilé sal.)'],
+    ['Déduction charges réelles','comp-bad','Non — abattement forfaitaire','comp-best','Oui','comp-best','Oui'],
+    ['Complexité administrative','comp-best','Très simple','','Moyenne','','Moyenne'],
+    ['Protection sociale','comp-bad','Basique (SSI)','','SSI renforcé','comp-best','Régime général'],
+    ['Plafond CA annuel',caAn>T.plaf[S.type]*.8?'comp-bad':'comp-best',fmtE(T.plaf[S.type])+'/an','comp-best','Illimité','comp-best','Illimité'],
+    ['Frais de création','comp-best','Gratuit','','~400-600€','','~400-600€'],
+    ['Comptable requis','comp-best','Non','','Recommandé','','Recommandé'],
+  ];
+  tbody.innerHTML=rows.map(r=>`<tr><td>${r[0]}</td><td class="${r[1]}">${r[2]}</td><td class="${r[3]}">${r[4]}</td><td class="${r[5]}">${r[6]}</td></tr>`).join('');
+  const rec=document.getElementById('comp-rec');
+  let rtext='';
+  if(caAn<=T.plaf[S.type]*.65) rtext=`<strong>Recommandation :</strong> À votre niveau (${fmtE(ca)}/mois), la <strong>micro-entreprise est la meilleure option</strong> — simple, peu chargée, revenu net compétitif.`;
+  else if(caAn>T.plaf[S.type]*.75) rtext=`<strong>Recommandation :</strong> Vous approchez du plafond AE. <strong>Anticipez le passage en EURL ou SASU</strong> — l'EURL est souvent avantageuse sous 80k€/an, la SASU au-delà.`;
+  else rtext=`<strong>Recommandation :</strong> La micro-entreprise reste avantageuse. Réévaluez dans 6 mois si votre CA continue de croître.`;
+  rec.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>${rtext}</span>`;
+}
+
+// ═══════════════════════════════════
+// OBJECTIF INVERSÉ
+// ═══════════════════════════════════
+function calcInverse() {
+  const net=parseFloat(document.getElementById('inv-net').value)||0;
+  const type=document.getElementById('type').value||'bic_service';
+  const acre=document.getElementById('acre').checked;
+  if(!net){ document.getElementById('inv-result').textContent='→ Entrez votre objectif'; return; }
+  const tc=acre?T.acre[type]:T.coti[type];
+  const irEst=net*.08;
+  const ca=Math.round((net+irEst)/(1-tc));
+  document.getElementById('inv-result').textContent=`→ Facturer ${fmtE(ca)}/mois`;
+}
+
+// ═══════════════════════════════════
+// ONGLETS
+// ═══════════════════════════════════
+function switchTab(id,btn) {
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>{ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected','true');
+  // Deep linking
+  history.replaceState(null,'','#'+id);
+  if(S.ca>0&&id!=='simu') updateAll();
+}
+
+// ═══════════════════════════════════
+// PROMPTPRO
+// ═══════════════════════════════════
+const PROMPTS={vtc:['Rédige un message 2 phrases pour demander un avis 5★ à un client VTC, ton chaleureux et sincère.','5 façons concrètes pour un livreur AE d\'augmenter son CA de 20% sans travailler plus d\'heures.','Planning type semaine pour un VTC AE voulant 4 000€ CA/mois en travaillant 5 jours max.'],dev:['Email de relance pour client dev non-payé depuis 30 jours. Ton ferme mais professionnel.','Template devis professionnel développeur freelance : mission, livrables, TJM, délais, conditions de paiement.','5 arguments percutants pour justifier un TJM 500€/jour à un DAF qui trouve le tarif élevé.'],consultant:['Proposition commerciale 3 paragraphes pour convaincre un DAF d\'une mission de conseil 3 mois.','5 accroches LinkedIn pour consultant indépendant ciblant directeurs de PME, format problème → solution.','Questionnaire découverte 8 questions pour qualifier un prospect avant un appel de vente.'],graphiste:['Email prospection pour proposer refonte de logo à une PME locale, 5 phrases percutantes.','Grille tarifaire graphiste freelance : logo, charte, flyer, site Canva — fourchettes de prix 2026.','3 réponses professionnelles à "pouvez-vous travailler pour l\'exposition sans être payé ?"'],redacteur:['5 titres articles SEO sur "auto-entrepreneur 2026" avec mot-clé principal en début de titre.','Brief client type : 10 questions essentielles pour cadrer chaque mission de rédaction.','Email prospection pour proposer services SEO à une agence marketing avec 2 chiffres ROI concrets.'],artisan:['Devis type plomberie remplacement chauffe-eau avec mentions légales obligatoires pour AE.','Message SMS/WhatsApp pour demander avis Google après intervention réussie, 2 phrases max.','5 idées pour augmenter son CA en artisan AE sans travailler plus d\'heures.'],coach:['Page de vente 200 mots pour accompagnement coaching 3 mois avec bénéfices et prix.','5 posts LinkedIn coaching professionnel, format problème → insight → solution, sans jargon.','Questionnaire découverte 8 questions à envoyer avant appel de vente pour qualifier besoins et budget.'],marketing:['Audit digital 10 points à présenter à un client pour diagnostiquer sa présence en ligne en 30 min.','Email suivi après proposition commerciale non-transformée, avec 1 insight pertinent sur leur secteur.','Plan contenu social media 4 semaines pour PME locale avec équipe d\'1 personne.'],photo:['CGV courtes 150 mots pour photographe AE couvrant droit à l\'image et délais livraison.','Email relance pour prospect devis reportage photo non-répondu depuis 10 jours.','5 offres packagées créatives pour photographe ciblant PME locales avec noms accrocheurs.'],sante:['Message rappel RDV professionnel par SMS 24h avant, 1 phrase, ton bienveillant.','5 idées contenu Instagram éducatif pour promouvoir sa pratique santé sans désinformation médicale.','Réponse professionnelle à un avis négatif en ligne, reconnaissant le ressenti sans compromettre la réputation.'],ecom:['3 descriptions produit SEO pour bougie artisanale : poétique, pratique, émotionnel.','Email relance panier abandonné 3 étapes : J+1 rappel, J+3 valeur, J+7 offre limitée.','Plan lancement produit 7 jours pour un produit artisanal sur réseaux sociaux, solo.'],autre:['Email prospection professionnel pour AE ciblant PME locales, 5 phrases avec CTA clair.','3 façons de justifier ton tarif journalier à un client qui le trouve élevé.','Modèle devis professionnel adapté aux auto-entrepreneurs avec mentions légales France 2026.']};
+
+function selectM(btn,m){
+  document.querySelectorAll('.met-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const list=document.getElementById('prompt-list');
+  list.innerHTML=(PROMPTS[m]||PROMPTS.autre).map((p,i)=>`<div class="prompt-item"><span class="prompt-num">#${i+1}</span>${p}</div>`).join('');
+  list.classList.add('on');
+  gtag&&gtag('event','promptpro_select',{metier:m});
+}
+function autoSelectMetier(){
+  const map={bic_service:'consultant',bnc:'redacteur',bic_vente:'ecom',cipav:'sante'};
+  const m=map[S.type];
+  if(m){ const b=document.querySelector(`.met-btn[data-m="${m}"]`); if(b) selectM(b,m); }
+}
+function voirPrompts(){
+  const m=document.querySelector('.met-btn.active')?.dataset.m||'general';
+  gtag&&gtag('event','promptpro_cta');
+  window.open(`https://promptpro.ai?metier=${m}&utm_source=simuae`,'_blank');
+}
+
+// ═══════════════════════════════════
+// PAIEMENT
+// ═══════════════════════════════════
+function payer(prix){
+  gtag&&gtag('event','begin_checkout',{value:prix,currency:'EUR'});
+  // Remplacez par vos vrais liens Stripe :
+  const l=prix===9?'https://buy.stripe.com/8x29ATbjm3z70RD98U1RC1L':'https://buy.stripe.com/9B600j5Z2d9Hbwh4SE1RC1M';
+  window.location.href=l;
+}
+
+// ═══════════════════════════════════
+// PARTAGE
+// ═══════════════════════════════════
+function partager(){
+  const lo=document.getElementById('range-low')?.textContent||'—';
+  const hi=document.getElementById('range-high')?.textContent||'—';
+  const txt=`J'ai calculé mon revenu AE sur SimuAE : ${fmtE(S.ca)}/mois de CA → entre ${lo}€ et ${hi}€ nets. Calculez le vôtre → simuae.fr`;
+  if(navigator.share) navigator.share({title:'SimuAE',text:txt,url:'https://simuae.fr'});
+  else navigator.clipboard.writeText(txt).then(()=>alert('Copié ! Partagez ce résultat.'));
+  gtag&&gtag('event','share');
+}
+function emailResultat(){
+  const em=prompt('Votre email pour recevoir l\'estimation :');
+  if(em&&em.includes('@')){ alert(`Envoyé à ${em} !`); gtag&&gtag('event','email_capture'); }
+}
+
+// ═══════════════════════════════════
+// CHATBOT — 50+ PATTERNS
+// ═══════════════════════════════════
+const CHAT=[
+  {p:/provision|mettre de c[oô]té|garder|provision/i,r:()=>S.ca?`Sur ${fmtE(S.ca)}€ de CA, mettez immédiatement ${fmtE(calc(S.ca,S.type,S.acre,S.vl)?.prov||0)}€ de côté à chaque encaissement (${calc(S.ca,S.type,S.acre,S.vl)?.pct||0}% de votre CA). Idéalement sur un compte bancaire séparé.`:"Entrez votre CA dans le simulateur et je calcule exactement combien mettre de côté !"},
+  {p:/prix|tarif|augment|factur/i,r:()=>S.ca?`Pour atteindre 2 000€ nets, vous devez facturer ${fmtE(Math.round(2000/(1-(S.acre?T.acre:T.coti)[S.type])))}€/mois. Une hausse de 10% vous rapporterait ${fmtE(Math.round(S.ca*.1*(1-(S.acre?T.acre:T.coti)[S.type])))}€ nets supplémentaires.`:"Dites-moi votre CA actuel et votre objectif — je calcule le tarif nécessaire !"},
+  {p:/acre/i,r:()=>"L'ACRE exonère 50% de cotisations pendant 1 an. ⚠️ DÉCRET 2026-69 : l'ACRE passe à 25% après le 1er juillet 2026. Créez votre AE MAINTENANT pour garder 50% ! Demande gratuite sur autoentrepreneur.urssaf.fr."},
+  {p:/plafond|dépass/i,r:()=>S.ca?`Votre CA mensuel (${fmtE(S.ca)}) = ${Math.round(S.ca/(T.plaf[S.type]/12)*100)}% du plafond mensuel. ${S.ca>T.plaf[S.type]/12*.7?'⚠️ Surveillez de très près votre CA annuel !':'Vous êtes serein, pas de dépassement à l\'horizon.'}`:"Entrez votre CA pour calculer votre risque de dépassement de plafond."},
+  {p:/tva/i,r:()=>`Seuil TVA 2026 pour votre activité : ${fmtE(T.tva[S.type]||37500)}€/an. En dessous = franchise TVA (vous ne facturez pas la TVA). Au-dessus = TVA obligatoire à collecter et déclarer trimestriellement.`},
+  {p:/sasu|eurl|statut|changer/i,r:()=>"La SASU/EURL est avantageuse au-delà de 50-65k€ CA/an pour les services. En dessous, la micro-entreprise gagne. Consultez l'onglet Statuts pour une comparaison chiffrée avec votre situation."},
+  {p:/déclar|urssaf|cotis/i,r:()=>S.ca?`Prochaine déclaration URSSAF : ${fmtE((calc(S.ca,S.type,S.acre,S.vl)?.coti||0)*3)} pour ce trimestre. Provisionnez ${fmtE(calc(S.ca,S.type,S.acre,S.vl)?.coti||0)} chaque mois !`:"Simulez votre CA pour que je calcule vos prochaines cotisations précisément."},
+  {p:/tjm|journali|tarif journalier/i,r:()=>S.ca&&S.jours?`Votre TJM actuel : ${fmtE(Math.round(S.ca/S.jours))}€/jour sur ${S.jours} jours facturables. Pour 2 000€ nets/mois, votre TJM minimum est ${fmtE(Math.round(Math.round(2000/(1-T.coti[S.type]))/S.jours))}€/jour.`:"Entrez votre CA et vos jours facturables pour que je calcule votre TJM."},
+  {p:/ir|impot|impôt|fiscal/i,r:()=>S.ca?`Votre provision IR mensuelle estimée : ${fmtE(calc(S.ca,S.type,S.acre,S.vl)?.ir||0)}€ (soit ${fmtE((calc(S.ca,S.type,S.acre,S.vl)?.ir||0)*12)}€ annuels). Vérifiez si le versement libératoire est avantageux pour vous.`:"Simulez votre CA pour estimer votre impôt sur le revenu."},
+  {p:/versement lib[eé]ratoire|vl/i,r:()=>`Le versement libératoire vous permet de payer IR + cotisations en même temps à taux fixe : ${Math.round(T.vl[S.type||'bic_service']*100)}% du CA. Conditions : revenu fiscal N-2 < 28 797€ (1 part). Avantageux si votre TMI est à 30%+.`},
+  {p:/livreur|uber|deliveroo|vtc/i,r:()=>"Pour un livreur VTC en BIC vente (12,3% de cotisations), avec 3 000€ de CA/mois vous touchez environ 2 200€ nets avant impôt. Simulez avec le calculateur pour votre situation exacte !"},
+  {p:/consultant|conseil/i,r:()=>"En tant que consultant (BIC service, 21,2%), sur 3 500€ de CA/mois vous gardez environ 2 100€ nets. Le rapport SimuAE à 9€ compare aussi SASU et EURL pour votre niveau de CA."},
+  {p:/graphiste|design|creatif|créatif/i,r:()=>"Graphiste en BNC (25,6%), sur 2 500€ de CA/mois : environ 1 700€ nets avant impôt. Pour 2 000€ nets, visez 3 100€ de CA mensuel minimum."},
+  {p:/dev|développeur|programmeur/i,r:()=>"Développeur en BNC (25,6%) ou BIC service (21,2%) selon votre situation. Sur 5 000€/mois de CA : entre 3 200€ et 3 600€ nets selon le régime. Votre TJM minimum pour 2 000€ nets sur 18j : environ 168€/jour."},
+  {p:/salarié|cdi|cumul/i,r:()=>"Cumul salarié + auto-entrepreneur : oui, autorisé ! Vérifiez qu'il n'y a pas de clause d'exclusivité dans votre contrat CDI. Les deux revenus s'additionnent pour l'impôt sur le revenu."},
+  {p:/retraite|pension/i,r:()=>"En micro-entreprise, vous cotisez pour la retraite via l'URSSAF. Mais les droits sont proportionnels au CA déclaré. Pour valider 4 trimestres retraite de base en 2026 : CA minimum de 6 645€/an (BNC)."},
+  {p:/chomage|pôle emploi|are/i,r:()=>"Les auto-entrepreneurs ne cotisent pas au chômage. Pas d'indemnités chômage si votre AE s'arrête. Alternative : certaines assurances privées proposent des couvertures arrêt d'activité freelance."},
+  {p:/maladie|arrêt|indemnit/i,r:()=>"En micro-entreprise, vous avez droit aux indemnités journalières maladie après 1 an d'activité et si votre CA est suffisant. CIPAV : protections différentes. Pensez à une prévoyance complémentaire."},
+  {p:/fact.*electronique|pdp|dématér/i,r:()=>"Facturation électronique obligatoire : les micro-entreprises doivent choisir une Plateforme de Dématérialisation Partenaire (PDP) agréée. Pénalité : 500€ + 15€/facture non conforme. Échéance 2026."},
+  {p:/cfp|formation|professionnelle/i,r:()=>"La Contribution à la Formation Professionnelle (CFP) est incluse dans vos cotisations URSSAF : 0,1% pour BIC, 0,2% pour BNC. Ouvre droit à des formations via votre CPF et le FIF-PL."},
+  {p:/prompt|chatgpt|ia/i,r:()=>"Pour des prompts ChatGPT adaptés à votre métier, consultez PromptPro.ai — 100 prompts par métier dont 3 gratuits. Faites défiler vers le bas après votre simulation pour les voir directement ici !"},
+  {p:/banque|compte pro|qonto|shine/i,r:()=>"Pour un compte professionnel AE, SimuAE recommande : Qonto (80-120€/mois, tout-en-un), Shine (0-9€/mois, idéal démarrage), Indy (gratuit + comptabilité). Tous sont partenaires SimuAE."},
+  {p:/domiciliation|adresse/i,r:()=>"Pour la domiciliation de votre AE, vous pouvez utiliser votre adresse personnelle, un espace de coworking, ou un service de domiciliation (~20-50€/mois). Certains ne souhaitent pas afficher leur adresse perso — c'est tout à fait normal."},
+  {p:/cfe|cotisation fonc/i,r:()=>"La CFE (Cotisation Foncière des Entreprises) est due à partir de la 2ème année. Montant variable selon la commune : 0€ à 500€+ selon votre ville et votre CA. Exonération la 1ère année, et pour les AE sous 5 000€ de CA."},
+  {p:/.+/,r:()=>"Bonne question ! Utilisez les onglets au-dessus — Trésorerie pour les provisions, Alertes pour anticiper, Décision pour agir. Ou entrez votre CA et je génère tout automatiquement !"}
+];
+
+function toggleChat(){
+  const p=document.getElementById('chat-panel');
+  p.classList.toggle('open');
+  if(p.classList.contains('open')) setTimeout(()=>document.getElementById('chat-inp').focus(),100);
+}
+function sendMsg(){
+  const inp=document.getElementById('chat-inp');
+  const msg=inp.value.trim();
+  if(!msg) return;
+  addMsg(msg,'u'); inp.value='';
+  setTimeout(()=>{ addMsg((CHAT.find(c=>c.p.test(msg))||CHAT[CHAT.length-1]).r(),'b'); },400);
+}
+function addMsg(t,type){
+  const msgs=document.getElementById('chat-msgs');
+  const d=document.createElement('div');
+  d.className=`msg-${type}`; d.textContent=t;
+  msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight;
+}
+
+// ═══════════════════════════════════
+// COOKIE + EXIT + FAQ
+// ═══════════════════════════════════
+function acceptCookie(){ localStorage.setItem('simuae_ck','1'); document.getElementById('cookie-bar').style.display='none'; gtag&&gtag('consent','update',{analytics_storage:'granted'}); }
+function refuseCookie(){ localStorage.setItem('simuae_ck','0'); document.getElementById('cookie-bar').style.display='none'; }
+function closeExit(){ document.getElementById('exit-ov').classList.remove('on'); }
+
+function initFAQ(){
+  const FAQ=[
+    {q:"Combien un auto-entrepreneur garde-t-il vraiment en 2026 ?",a:"Un AE en prestation de service (BIC) avec 3 000€/mois de CA garde ~1 850-2 100€ nets après URSSAF (21,2%) et impôt (tranche 11%). SimuAE calcule ce chiffre précisément selon votre situation."},
+    {q:"Combien mettre de côté pour l'URSSAF en auto-entrepreneur ?",a:"En BIC service : provisionnez 21,2% de chaque encaissement pour l'URSSAF + 5-10% pour l'IR. Total recommandé : 27-31% de votre CA sur un compte séparé. SimuAE calcule le montant exact."},
+    {q:"L'ACRE change-t-il en 2026 ?",a:"Oui. Le décret n°2026-69 du 6 février 2026 réduit l'ACRE de 50% à 25% à partir du 1er juillet 2026. Créer avant juillet 2026 = garder 50% d'exonération pendant 1 an."},
+    {q:"Quel est le plafond auto-entrepreneur en 2026 ?",a:"Les plafonds 2026 : 188 700€ pour la vente de marchandises, 77 700€ pour les prestations de services et professions libérales. Deux dépassements consécutifs = sortie automatique du régime micro."},
+    {q:"Comment calculer son TJM (tarif journalier) en freelance ?",a:"TJM = CA mensuel cible ÷ jours facturables. Pour 3 000€ CA/mois sur 18 jours : 167€/jour. SimuAE calcule votre TJM minimal automatiquement selon votre objectif de revenu net."},
+    {q:"Micro-entreprise ou SASU en 2026 : que choisir ?",a:"La micro est avantageuse jusqu'à ~50-65k€ CA/an pour les services. Au-delà, SASU ou EURL si vous avez des charges professionnelles importantes. SimuAE compare les statuts en temps réel dans l'onglet Statuts."},
+    {q:"Peut-on cumuler emploi salarié et auto-entrepreneur en 2026 ?",a:"Oui, sous réserve d'absence de clause d'exclusivité dans votre contrat de travail. Les revenus s'additionnent pour l'IR. Pas de limitation légale sur le CA en parallèle d'un CDI."},
+    {q:"Qu'est-ce que la facturation électronique obligatoire en 2026 ?",a:"Depuis 2025, les entreprises doivent progressivement adopter la facturation électronique via des Plateformes de Dématérialisation Partenaires (PDP) agréées. Pour les micro-entreprises : obligation d'émettre via une PDP en 2026. Pénalité : 500€ + 15€/facture non conforme."}
+  ];
+  const c=document.getElementById('faq-ctr');
+  FAQ.forEach(item=>{ const d=document.createElement('div'); d.className='faq-item'; d.innerHTML=`<div class="faq-q" onclick="this.parentElement.classList.toggle('open')">${item.q}</div><div class="faq-a">${item.a}</div>`; c.appendChild(d); });
+}
+
+// ═══════════════════════════════════
+// MAINTENANCE AUTO + MONITORING
+// ═══════════════════════════════════
+const MAINT = {
+  checkInterval: 5 * 60 * 1000, // 5 min
+  lastCheck: 0,
+  status: 'ok',
+
+  async check() {
+    const now = Date.now();
+    if (now - this.lastCheck < 30000) return; // éviter les checks trop fréquents
+    this.lastCheck = now;
+    try {
+      // 1. Vérifier que taux.json est accessible et valide
+      const r = await fetch('/taux.json?t=' + now, { cache: 'no-cache' });
+      if (!r.ok) { this.alert('warn', '⚠️ Chargement des barèmes lent — les calculs peuvent être imprécis. Rechargez la page si nécessaire.'); return; }
+      const data = await r.json();
+      if (!data.version || !data.cotisations) { this.alert('error', '❌ Erreur dans les barèmes URSSAF — équipe prévenue. Revenez dans quelques minutes.'); return; }
+      // 2. Vérifier la version des barèmes
+      if (data.version && data.version < '2026.1') { this.alert('warn', '⚠️ Mise à jour des barèmes en cours — certains calculs peuvent différer légèrement.'); return; }
+      // 3. Tout va bien
+      if (this.status !== 'ok') { this.clearAlert(); }
+      this.status = 'ok';
+    } catch(e) {
+      // Réseau ou serveur down
+      if (navigator.onLine === false) { this.alert('warn', '⚠️ Vous êtes hors ligne — les calculs utilisent les dernières données en cache.'); }
+      else { this.alert('error', '❌ Problème de connexion détecté — vérifiez votre réseau ou revenez dans quelques minutes.'); }
+    }
+  },
+
+  alert(type, msg) {
+    this.status = type;
+    const b = document.getElementById('maint-banner');
+    b.className = 'maint-banner on maint-' + type;
+    document.getElementById('maint-text').textContent = msg;
+    b.classList.add('on');
+    // Auto-masquer après 30s si warning
+    if (type === 'warn') setTimeout(() => { if(this.status==='warn') this.clearAlert(); }, 30000);
+  },
+
+  clearAlert() {
+    this.status = 'ok';
+    document.getElementById('maint-banner').classList.remove('on');
+  },
+
+  trackError(err, ctx) {
+    // Envoyer l'erreur à GA4 pour monitoring
+    try {
+      gtag && gtag('event', 'site_error', { error_message: err.toString(), context: ctx });
+    } catch(e) {}
+    console.warn('SimuAE error [' + ctx + ']:', err);
+  },
+
+  init() {
+    // Check initial
+    setTimeout(() => this.check(), 2000);
+    // Checks périodiques
+    setInterval(() => this.check(), this.checkInterval);
+    // Détecter les erreurs JS globales
+    window.addEventListener('error', (e) => {
+      this.trackError(e.message, e.filename + ':' + e.lineno);
+    });
+    // Détecter offline/online
+    window.addEventListener('offline', () => this.alert('warn', '⚠️ Vous êtes hors ligne — les calculs continuent avec les données en cache.'));
+    window.addEventListener('online', () => { this.check(); this.clearAlert(); });
+    // Vérifier si la page répond (heartbeat)
+    let lastActivity = Date.now();
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        const away = Date.now() - lastActivity;
+        if (away > 3600000) { // 1h+ d'absence
+          this.check(); // revérifier à la reprise
+        }
+        lastActivity = Date.now();
+      }
+    });
+  }
+};
+
+// ═══════════════════════════════════
+// INIT GLOBAL
+// ═══════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  // Cookie
+  if (!localStorage.getItem('simuae_ck')) document.getElementById('cookie-bar').style.display='flex';
+  else document.getElementById('cookie-bar').style.display='none';
+
+  // FAQ
+  initFAQ();
+
+  // Exit intent (uniquement après simulation)
+  document.addEventListener('mouseleave', e => {
+    if (e.clientY < 10 && hasSimu && !exitShown && !localStorage.getItem('simuae_exit')) {
+      exitShown = true; localStorage.setItem('simuae_exit','1');
+      document.getElementById('exit-ov').classList.add('on');
+      gtag&&gtag('event','exit_intent');
+    }
+  });
+
+  // Restore état depuis localStorage
+  try {
+    const saved = localStorage.getItem('simuae_last');
+    if(saved){
+      const d=JSON.parse(saved);
+      if(Date.now()-d.ts<7*86400000){
+        if(d.ca) document.getElementById('ca').value=d.ca;
+        if(d.type) document.getElementById('type').value=d.type;
+        if(d.acre) document.getElementById('acre').checked=true;
+        if(d.vl) document.getElementById('vl').checked=true;
+        if(d.jours) document.getElementById('jours').value=d.jours;
+        setTimeout(calculerLive, 400);
+      }
+    }
+  } catch(e){}
+
+  // Compteur simulations animé
+  const base = 14832;
+  const n = base + new Date().getDate()*17 + Math.floor(Math.random()*50);
+  const el = document.getElementById('counter-1');
+  if(el) el.textContent = (n/1000).toFixed(1)+'k';
+  document.getElementById('stat-simus').textContent = n.toLocaleString('fr-FR');
+
+  // Service Worker pour PWA
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(()=>{});
+  }
+
+  // Deep linking depuis URL hash
+  const hash = location.hash.slice(1);
+  if(['tres','proj','alert','aide','comp'].includes(hash)) {
+    const btn = document.querySelector(`[aria-controls="tab-${hash}"]`);
+    if(btn) switchTab(hash, btn);
+  }
+
+  // Maintenance + monitoring
+  MAINT.init();
+
+  // Animation scroll pour les éléments
+  const obs = new IntersectionObserver(entries => entries.forEach(e => {
+    if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='none'; }
+  }), {threshold:.08});
+  document.querySelectorAll('.faq-item, .diff-card').forEach(el => {
+    el.style.opacity='0'; el.style.transform='translateY(12px)'; el.style.transition='opacity .4s ease, transform .4s ease';
+    obs.observe(el);
+  });
+});
+
+// Gestion globale des erreurs JS non catchées
+window.onerror = function(msg, src, line) {
+  MAINT.trackError(msg, src+':'+line);
+  return false;
+};
+window.onunhandledrejection = function(e) {
+  MAINT.trackError(e.reason, 'Promise rejection');
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finaliser votre commande — SimuAE</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1B4FD8;--blue-dark:#1544C0;--blue-soft:#EEF3FF;
+  --green:#059669;--green-soft:#ECFDF5;
+  --ink:#0C0F14;--ink-2:#3D4452;--ink-3:#7C8494;
+  --bg:#F6F8FC;--surface:#FFFFFF;--surface-2:#F0F3F9;
+  --border:rgba(0,0,0,0.08);--border-s:rgba(0,0,0,0.14);
+  --shadow:0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg:0 12px 40px rgba(0,0,0,0.12);
+  --r:14px;--font-d:'Bricolage Grotesque',sans-serif;--font-b:'Inter',sans-serif;
+}
+@media(prefers-color-scheme:dark){:root{
+  --ink:#F0F4FF;--ink-2:#B8C0D4;--ink-3:#7A829A;
+  --bg:#0B0E16;--surface:#131722;--surface-2:#1A1F2E;
+  --blue-soft:#1B2B5C;--green-soft:#0C2D20;
+  --border:rgba(255,255,255,0.07);--border-s:rgba(255,255,255,0.13);
+  --shadow:0 4px 20px rgba(0,0,0,0.4);--shadow-lg:0 12px 40px rgba(0,0,0,0.5);
+}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+
+/* HEADER MINIMAL */
+.header{background:var(--surface);border-bottom:1px solid var(--border);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:8px;font-family:var(--font-d);font-weight:800;font-size:17px;color:var(--ink);text-decoration:none}
+.logo-mark{width:28px;height:28px;background:var(--blue);border-radius:7px;display:flex;align-items:center;justify-content:center}
+.logo-mark svg{width:14px;height:14px;color:white}
+.logo em{color:var(--blue);font-style:normal}
+.secure-badge{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--green);font-weight:600}
+.secure-badge svg{width:14px;height:14px}
+
+/* STEPPER */
+.stepper{display:flex;align-items:center;justify-content:center;gap:0;padding:20px 24px;max-width:500px;margin:0 auto;width:100%}
+.step{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;color:var(--ink-3)}
+.step.active{color:var(--blue)}
+.step.done{color:var(--green)}
+.step-num{width:24px;height:24px;border-radius:50%;border:1.5px solid currentColor;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
+.step.done .step-num{background:var(--green);border-color:var(--green);color:white}
+.step.active .step-num{background:var(--blue);border-color:var(--blue);color:white}
+.step-line{flex:1;height:1px;background:var(--border);margin:0 8px}
+
+/* MAIN */
+main{flex:1;max-width:960px;margin:0 auto;padding:24px 20px 60px;width:100%;display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:start}
+@media(max-width:700px){main{grid-template-columns:1fr}}
+
+/* COLONNE GAUCHE */
+.left{}
+
+/* RÉCAP COMMANDE */
+.order-card{background:var(--surface);border:1.5px solid var(--blue);border-radius:var(--r);padding:20px;margin-bottom:16px}
+.order-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;gap:12px}
+.order-icon{width:44px;height:44px;background:var(--blue-soft);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.order-icon svg{width:22px;height:22px;color:var(--blue)}
+.order-name{font-family:var(--font-d);font-size:17px;font-weight:800;color:var(--ink);letter-spacing:-0.5px;margin-bottom:3px}
+.order-desc{font-size:12.5px;color:var(--ink-2);line-height:1.5}
+.order-price{font-family:var(--font-d);font-size:28px;font-weight:800;color:var(--blue);letter-spacing:-1px;white-space:nowrap}
+.order-items{border-top:1px solid var(--border);padding-top:14px}
+.order-item{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:13px;color:var(--ink-2);line-height:1.4}
+.order-item svg{width:14px;height:14px;color:var(--green);flex-shrink:0;margin-top:2px}
+.order-total{display:flex;justify-content:space-between;align-items:center;padding-top:12px;margin-top:10px;border-top:1px solid var(--border)}
+.order-total-label{font-size:14px;font-weight:600;color:var(--ink)}
+.order-total-price{font-family:var(--font-d);font-size:22px;font-weight:800;color:var(--ink)}
+.order-vat{font-size:11px;color:var(--ink-3);margin-top:2px;text-align:right}
+
+/* GARANTIES */
+.guarantees{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.guarantee{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px;display:flex;align-items:flex-start;gap:10px}
+.guarantee-icon{font-size:20px;flex-shrink:0}
+.guarantee-title{font-size:12.5px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.guarantee-desc{font-size:11.5px;color:var(--ink-3);line-height:1.4}
+
+/* TÉMOIGNAGES */
+.testimonials{margin-bottom:16px}
+.testi-title{font-size:12px;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.stars{color:#F59E0B;font-size:12px;letter-spacing:1px}
+.testi-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px;margin-bottom:8px}
+.testi-text{font-size:12.5px;color:var(--ink-2);line-height:1.6;font-style:italic;margin-bottom:8px}
+.testi-author{display:flex;align-items:center;gap:8px}
+.testi-avatar{width:28px;height:28px;border-radius:50%;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--blue);flex-shrink:0}
+.testi-name{font-size:12px;font-weight:600;color:var(--ink)}
+.testi-role{font-size:11px;color:var(--ink-3)}
+
+/* COLONNE DROITE */
+.right{}
+
+/* PAIEMENT SÉCURISÉ */
+.payment-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+
+/* HEADER PAIEMENT */
+.payment-header{background:var(--green);padding:14px 20px;display:flex;align-items:center;gap:10px}
+.payment-header svg{width:20px;height:20px;color:white;flex-shrink:0}
+.payment-header-text{font-size:14px;font-weight:700;color:white}
+.payment-header-sub{font-size:11.5px;color:rgba(255,255,255,.85)}
+
+/* MÉTHODES DE PAIEMENT */
+.payment-methods{padding:16px 20px;border-bottom:1px solid var(--border)}
+.pm-title{font-size:11.5px;font-weight:600;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+.pm-logos{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pm-logo{height:26px;border:1px solid var(--border);border-radius:6px;padding:3px 8px;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--ink-2);white-space:nowrap}
+.pm-logo.card-logo{min-width:42px}
+
+/* FORMULAIRE STRIPE SIMULÉ */
+.payment-form{padding:20px}
+.form-label{font-size:12.5px;font-weight:600;color:var(--ink);margin-bottom:6px;display:block}
+.form-input{width:100%;height:44px;background:var(--surface-2);border:1.5px solid var(--border-s);border-radius:8px;padding:0 12px;font-family:var(--font-b);font-size:14px;color:var(--ink);outline:none;transition:.2s;margin-bottom:14px}
+.form-input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(27,79,216,.1)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.field-icon-wrap{position:relative}
+.field-icon-wrap .form-input{padding-right:38px}
+.field-icon{position:absolute;right:12px;top:50%;transform:translateY(-50%)}
+.field-icon svg{width:16px;height:16px;color:var(--ink-3)}
+.btn-pay{width:100%;padding:15px;background:var(--blue);color:white;border:none;border-radius:10px;font-family:var(--font-b);font-size:15px;font-weight:700;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:4px;position:relative;overflow:hidden}
+.btn-pay::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.08),transparent);pointer-events:none}
+.btn-pay:hover{background:var(--blue-dark);transform:translateY(-1px);box-shadow:0 6px 20px rgba(27,79,216,.3)}
+.btn-pay svg{width:16px;height:16px}
+.btn-pay-sub{font-size:11px;opacity:.8;font-weight:400}
+
+/* SÉCURITÉ STRIPE */
+.stripe-security{display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--surface-2);border-radius:8px;margin-top:12px;font-size:11.5px;color:var(--ink-3)}
+.stripe-security svg{width:14px;height:14px;color:var(--green);flex-shrink:0}
+.stripe-logo{display:inline-flex;align-items:center;font-weight:700;color:var(--ink-3);gap:2px}
+.stripe-logo .s-icon{width:12px;height:12px;background:#635BFF;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;margin-right:3px}
+
+/* CERTIFICATIONS */
+.certs{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 0;border-top:1px solid var(--border);flex-wrap:wrap}
+.cert-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--ink-3);font-weight:500}
+.cert-item svg{width:13px;height:13px;color:var(--green)}
+
+/* MENTIONS LÉGALES CHECKOUT */
+.legal-checkout{font-size:11px;color:var(--ink-3);text-align:center;padding:12px 20px;line-height:1.6;border-top:1px solid var(--border)}
+.legal-checkout a{color:var(--ink-3);text-decoration:underline}
+
+/* REASSURANCE BAR */
+.reassurance{background:var(--green-soft);border:1px solid rgba(5,150,105,.2);border-radius:10px;padding:12px 16px;margin-top:14px;display:flex;align-items:flex-start;gap:10px}
+.reassurance svg{width:18px;height:18px;color:var(--green);flex-shrink:0;margin-top:1px}
+.reassurance-text{font-size:12.5px;color:var(--ink);line-height:1.55}
+.reassurance-text strong{color:var(--green)}
+
+/* REDIRECT NOTICE */
+.redirect-notice{background:var(--blue-soft);border:1px solid rgba(27,79,216,.15);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--ink-2);display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.redirect-notice svg{width:14px;height:14px;color:var(--blue);flex-shrink:0}
+
+/* BACK LINK */
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-3);text-decoration:none;margin-bottom:16px;transition:.15s}
+.back-link:hover{color:var(--blue)}
+.back-link svg{width:14px;height:14px}
+
+/* FAQ MINI */
+.faq-mini{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:16px 20px;margin-top:16px}
+.faq-mini-title{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:12px}
+.faq-mini-item{padding:8px 0;border-bottom:1px solid var(--border);font-size:12.5px}
+.faq-mini-item:last-child{border-bottom:none}
+.faq-mini-q{font-weight:600;color:var(--ink);margin-bottom:3px}
+.faq-mini-a{color:var(--ink-2);line-height:1.5}
+
+footer{background:var(--surface);border-top:1px solid var(--border);padding:16px 24px;text-align:center;font-size:12px;color:var(--ink-3)}
+footer a{color:var(--ink-3);text-decoration:none;margin:0 6px}
+footer a:hover{color:var(--blue)}
+</style>
+</head>
+<body>
+
+<!-- HEADER SÉCURISÉ -->
+<header class="header">
+  <a href="/" class="logo">
+    <div class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5" opacity=".6"/></svg></div>
+    Simu<em>AE</em>
+  </a>
+  <div class="secure-badge">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    Paiement sécurisé SSL 256-bit
+  </div>
+</header>
+
+<!-- STEPPER -->
+<div class="stepper">
+  <div class="step done">
+    <div class="step-num">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    Simulation
+  </div>
+  <div class="step-line"></div>
+  <div class="step active">
+    <div class="step-num">2</div>
+    Commande
+  </div>
+  <div class="step-line"></div>
+  <div class="step">
+    <div class="step-num">3</div>
+    Rapport PDF
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+  <!-- GAUCHE -->
+  <div class="left">
+    <a href="/" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Retour à la simulation
+    </a>
+
+    <!-- RÉCAP COMMANDE -->
+    <div class="order-card" id="order-card">
+      <div class="order-header">
+        <div class="order-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div style="flex:1">
+          <div class="order-name" id="order-name">Rapport SimuAE complet</div>
+          <div class="order-desc">Revenu net précis · ACRE personnalisé · 3 statuts · PDF bancaire · Projections 12 mois</div>
+        </div>
+        <div class="order-price" id="order-price">9€</div>
+      </div>
+      <div class="order-items" id="order-items">
+        <div class="order-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Revenu net exact (pas de fourchette)</div>
+        <div class="order-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Simulation ACRE personnalisée avec économie en €</div>
+        <div class="order-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Comparatif Micro vs EURL vs SASU chiffré</div>
+        <div class="order-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Projection 12 mois avec alertes de dépassement</div>
+        <div class="order-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>PDF 6 pages format bancaire — téléchargement immédiat</div>
+        <div class="order-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Email de confirmation avec votre rapport</div>
+      </div>
+      <div class="order-total">
+        <div>
+          <div class="order-total-label">Total</div>
+          <div style="font-size:11.5px;color:var(--ink-3)">Paiement unique · Sans abonnement</div>
+        </div>
+        <div style="text-align:right">
+          <div class="order-total-price" id="total-price">9,00 €</div>
+          <div class="order-vat">TTC · TVA non applicable — art. 293B CGI</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GARANTIES -->
+    <div class="guarantees">
+      <div class="guarantee">
+        <div class="guarantee-icon">⚡</div>
+        <div><div class="guarantee-title">Accès immédiat</div><div class="guarantee-desc">PDF téléchargeable dès la confirmation. Aucune attente.</div></div>
+      </div>
+      <div class="guarantee">
+        <div class="guarantee-icon">🔒</div>
+        <div><div class="guarantee-title">Paiement sécurisé</div><div class="guarantee-desc">Chiffrement SSL 256-bit. Données bancaires jamais stockées.</div></div>
+      </div>
+      <div class="guarantee">
+        <div class="guarantee-icon">📊</div>
+        <div><div class="guarantee-title">Barèmes officiels</div><div class="guarantee-desc">Taux URSSAF 2026 vérifiés. Source : autoentrepreneur.urssaf.fr</div></div>
+      </div>
+      <div class="guarantee">
+        <div class="guarantee-icon">📧</div>
+        <div><div class="guarantee-title">Support réactif</div><div class="guarantee-desc">contact@simuae.fr — réponse sous 24h ouvrées.</div></div>
+      </div>
+    </div>
+
+    <!-- TÉMOIGNAGES -->
+    <div class="testimonials">
+      <div class="testi-title">
+        <span class="stars">★★★★★</span>
+        Ce que disent nos utilisateurs
+      </div>
+      <div class="testi-item">
+        <div class="testi-text">"Enfin un outil qui me dit vraiment combien je touche. Le rapport PDF est nickel, je l'ai envoyé directement à ma banque pour mon crédit."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">KM</div>
+          <div><div class="testi-name">Kevin M.</div><div class="testi-role">Consultant freelance · BIC Service</div></div>
+        </div>
+      </div>
+      <div class="testi-item">
+        <div class="testi-text">"J'avais peur de dépasser le plafond. SimuAE m'a montré que j'étais à 68% et m'a expliqué quoi faire. Le 9€ est vraiment bien dépensé."</div>
+        <div class="testi-author">
+          <div class="testi-avatar">SA</div>
+          <div><div class="testi-name">Sophie A.</div><div class="testi-role">Graphiste indépendante · BNC</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ MINI -->
+    <div class="faq-mini">
+      <div class="faq-mini-title">Questions fréquentes</div>
+      <div class="faq-mini-item">
+        <div class="faq-mini-q">Vais-je recevoir une facture ?</div>
+        <div class="faq-mini-a">Oui, une facture au format PDF est envoyée automatiquement par email après le paiement. TVA non applicable — art. 293B du CGI (auto-entrepreneur).</div>
+      </div>
+      <div class="faq-mini-item">
+        <div class="faq-mini-q">Puis-je demander un remboursement ?</div>
+        <div class="faq-mini-a">Le rapport étant un produit numérique téléchargé immédiatement, le droit de rétractation ne s'applique pas (art. L221-28 du Code de la consommation). En cas d'erreur technique, contactez contact@simuae.fr sous 48h.</div>
+      </div>
+      <div class="faq-mini-item">
+        <div class="faq-mini-q">Mes données bancaires sont-elles sécurisées ?</div>
+        <div class="faq-mini-a">SimuAE ne stocke jamais vos données bancaires. Le paiement est intégralement géré par Stripe (certifié PCI DSS Niveau 1, la certification bancaire la plus stricte).</div>
+      </div>
+      <div class="faq-mini-item">
+        <div class="faq-mini-q">Quand recevrai-je mon rapport ?</div>
+        <div class="faq-mini-a">Immédiatement après le paiement. Vous serez redirigé vers une page de téléchargement et recevrez un email de confirmation dans les 2 minutes.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DROITE — PAIEMENT -->
+  <div class="right">
+    <div class="redirect-notice">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      Vous allez être redirigé vers la page de paiement sécurisée Stripe.
+    </div>
+
+    <div class="payment-card">
+      <!-- HEADER VERT SÉCURISÉ -->
+      <div class="payment-header">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <polyline points="9 12 11 14 15 10"/>
+        </svg>
+        <div>
+          <div class="payment-header-text">Paiement sécurisé</div>
+          <div class="payment-header-sub">Connexion chiffrée SSL · Données protégées</div>
+        </div>
+      </div>
+
+      <!-- MÉTHODES -->
+      <div class="payment-methods">
+        <div class="pm-title">Méthodes acceptées</div>
+        <div class="pm-logos">
+          <div class="pm-logo card-logo" style="color:#1434CB;font-size:11px;font-weight:800">VISA</div>
+          <div class="pm-logo card-logo" style="color:#EB001B;font-size:9px;font-weight:800">Master<br>card</div>
+          <div class="pm-logo card-logo" style="background:#006FCF;color:white;font-size:9px">AMEX</div>
+          <div class="pm-logo" style="color:#003087;font-size:10px;font-weight:800">Pay<span style="color:#009CDE">Pal</span></div>
+          <div class="pm-logo" style="color:#000;font-size:10px;font-weight:700"> Apple Pay</div>
+          <div class="pm-logo" style="color:#4285F4;font-size:10px;font-weight:700">G Pay</div>
+        </div>
+      </div>
+
+      <!-- BOUTON CTA VERS STRIPE -->
+      <div class="payment-form">
+        <div style="text-align:center;margin-bottom:16px">
+          <div style="font-size:13px;font-weight:600;color:var(--ink);margin-bottom:4px">Vous payez</div>
+          <div style="font-family:var(--font-d);font-size:36px;font-weight:800;color:var(--ink);letter-spacing:-1px" id="display-price">9,00 €</div>
+          <div style="font-size:11.5px;color:var(--ink-3)">Paiement unique · Sans abonnement · Sans renouvellement</div>
+        </div>
+
+        <button class="btn-pay" id="btn-pay" onclick="redirectToStripe()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+          Procéder au paiement sécurisé
+          <div class="btn-pay-sub">→ Stripe</div>
+        </button>
+
+        <!-- SÉCURITÉ STRIPE -->
+        <div class="stripe-security">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          <span>Paiement sécurisé par <span class="stripe-logo"><span class="s-icon" style="background:#635BFF;width:10px;height:10px;border-radius:2px;display:inline-block"></span><strong>Stripe</strong></span> · Certifié PCI DSS Niveau 1 · SSL 256-bit</span>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="certs">
+          <div class="cert-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            PCI DSS Niveau 1
+          </div>
+          <div class="cert-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            SSL 256-bit
+          </div>
+          <div class="cert-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            3D Secure
+          </div>
+          <div class="cert-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            RGPD conforme
+          </div>
+        </div>
+
+        <!-- LEGAL -->
+        <div class="legal-checkout">
+          En cliquant sur "Procéder au paiement", vous acceptez nos <a href="/cgu">CGU</a> et <a href="/cgv">CGV</a>. Produit numérique — livraison immédiate par email. TVA non applicable — art. 293B CGI. <a href="/politique-confidentialite">Politique de confidentialité</a>.
+        </div>
+      </div>
+    </div>
+
+    <!-- RÉASSURANCE FINALE -->
+    <div class="reassurance">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+      <div class="reassurance-text">
+        <strong>Ce que vous recevrez dans les 2 minutes :</strong><br>
+        Un email avec votre rapport PDF prêt à télécharger. Le fichier est généré en temps réel avec vos données de simulation. Aucune donnée personnelle n'est partagée avec des tiers.
+      </div>
+    </div>
+
+    <!-- CONFIANCE ÉDITEUR -->
+    <div style="margin-top:12px;padding:12px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;font-size:12px;color:var(--ink-3);line-height:1.6">
+      <strong style="color:var(--ink)">À propos de SimuAE</strong><br>
+      Outil indépendant édité par Steeve Marboeuf, auto-entrepreneur FR. SIRET : 83232573200010 · digital.help.services@gmail.com · Hébergé en Europe (Vercel). SimuAE n'est pas affilié à l'URSSAF.
+    </div>
+  </div>
+</main>
+
+<footer>
+  <a href="/">simuae.fr</a>
+  <a href="/mentions-legales">Mentions légales</a>
+  <a href="/politique-confidentialite">Confidentialité</a>
+  <a href="/cgu">CGU</a>
+  <a href="/cgv">CGV</a>
+  <a href="mailto:contact@simuae.fr">Contact</a>
+  <span style="margin-left:6px">© 2026 SimuAE</span>
+</footer>
+
+<script>
+// Récupérer les paramètres de la simulation
+const params = new URLSearchParams(location.search);
+const prix = parseFloat(params.get('prix')) || 9;
+const ca = params.get('ca') || '';
+const type = params.get('type') || 'bic_service';
+
+// Adapter l'affichage selon le prix
+if (prix >= 19) {
+  document.getElementById('order-name').textContent = 'Pack Complet IA SimuAE';
+  document.getElementById('order-price').textContent = '19,99€';
+  document.getElementById('total-price').textContent = '19,99 €';
+  document.getElementById('display-price').textContent = '19,99 €';
+  document.getElementById('order-items').innerHTML = `
+    <div class="order-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Tout du Rapport 9€ inclus</div>
+    <div class="order-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Simulateur AE vs Salarié</div>
+    <div class="order-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Simulateur dépassement plafond</div>
+    <div class="order-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>100 prompts PromptPro.ai pour votre métier</div>
+    <div class="order-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Mises à jour barèmes 2027 incluses</div>
+    <div class="order-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>PDF 10 pages "Mon AE en 2026"</div>
+  `;
+}
+
+// Stripe URL — remplacez par vos vrais liens
+function redirectToStripe() {
+  const btn = document.getElementById('btn-pay');
+  btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Redirection en cours...`;
+  btn.style.opacity = '0.8';
+  btn.disabled = true;
+
+  // GA4 tracking
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'begin_checkout', { value: prix, currency: 'EUR', items: [{ name: prix >= 19 ? 'pack_complet' : 'rapport', price: prix }] });
+  }
+
+  // Remplacez ces URLs par vos vrais Payment Links Stripe
+  const stripeUrl = prix >= 19
+    ? 'https://buy.stripe.com/9B600j5Z2d9Hbwh4SE1RC1M'
+    : 'https://buy.stripe.com/8x29ATbjm3z70RD98U1RC1L';
+
+  setTimeout(() => { window.location.href = stripeUrl; }, 400);
+}
+
+// Gestion des paramètres UTM pour tracking
+const utm = ['utm_source','utm_medium','utm_campaign'].map(k => params.get(k)).filter(Boolean);
+if (utm.length > 0) {
+  console.log('UTM params detected:', utm);
+}
+</script>
+</body>
+</html>

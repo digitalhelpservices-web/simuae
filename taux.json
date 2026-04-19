@@ -1,0 +1,55 @@
+{
+  "version": "2026.1",
+  "updated": "2026-01-01",
+  "source": "autoentrepreneur.urssaf.fr",
+  "cotisations": {
+    "bic_vente": 0.123,
+    "bic_service": 0.212,
+    "bnc": 0.256,
+    "cipav": 0.232,
+    "bic_vente_acre": 0.0615,
+    "bic_service_acre": 0.106,
+    "bnc_acre": 0.128,
+    "cipav_acre": 0.116
+  },
+  "versement_liberatoire": {
+    "bic_vente": 0.01,
+    "bic_service": 0.017,
+    "bnc": 0.022
+  },
+  "plafonds": {
+    "ca_vente": 188700,
+    "ca_service": 77700,
+    "tva_vente": 85000,
+    "tva_service": 37500,
+    "tva_nouveau_seuil": 25000
+  },
+  "abattements": {
+    "bic_vente": 0.71,
+    "bic_service": 0.50,
+    "bnc": 0.34
+  },
+  "ir_tranches": [
+    { "min": 0, "max": 11294, "taux": 0 },
+    { "min": 11294, "max": 28797, "taux": 0.11 },
+    { "min": 28797, "max": 82341, "taux": 0.30 },
+    { "min": 82341, "max": 177106, "taux": 0.41 },
+    { "min": 177106, "max": 999999, "taux": 0.45 }
+  ],
+  "medianes_nationales": {
+    "bic_service": 1647,
+    "bnc": 1834,
+    "bic_vente": 1420,
+    "cipav": 2100
+  },
+  "cfp": {
+    "bic_service": 0.001,
+    "bic_vente": 0.001,
+    "bnc": 0.002
+  },
+  "acre_reforme_juillet_2026": {
+    "avant_juillet": 0.50,
+    "apres_juillet": 0.25,
+    "note": "Décret n°2026-69 du 6 février 2026 - créer avant juillet pour bénéficier de 50%"
+  }
+}

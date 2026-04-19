@@ -1,0 +1,44 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /rapport/
+Disallow: /admin/
+Crawl-delay: 1
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing / Copilot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# ChatGPT / OpenAI — Allow pour indexation AEO
+User-agent: GPTBot
+Allow: /
+Allow: /blog/
+Allow: /faq
+Allow: /taux.json
+Disallow: /api/
+Disallow: /rapport/
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Allow: /blog/
+
+# Claude / Anthropic
+User-agent: ClaudeBot
+Allow: /
+Allow: /blog/
+Allow: /taux.json
+
+# Common Crawl (training data LLMs)
+User-agent: CCBot
+Allow: /
+Allow: /blog/
+
+# Sitemap
+Sitemap: https://simuae.fr/sitemap.xml
