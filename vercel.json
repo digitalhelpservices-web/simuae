@@ -1,11 +1,15 @@
 {
-  "functions": {
-    "api/stripe-webhook.js": {
-      "memory": 128,
-      "maxDuration": 10
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
     }
-  },
-  "api": {
-    "bodyParser": false
-  }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
+  ]
 }
