@@ -1,3 +1,6 @@
+export const config = {
+  api: { bodyParser: false },
+};
 // api/stripe-webhook.js
 // Webhook Stripe → Brevo pour SimuAE
 // Déployer sur Vercel : ce fichier dans /api/ = endpoint automatique
